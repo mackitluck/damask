@@ -1,0 +1,88 @@
+@mixin fonts($family, $color, $size, $weight, $lineHeight, $space: 0) {
+  font-family: $family;
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  letter-spacing: $space;
+}
+
+@mixin background($bgImg, $bgPosition: center, $bgSize: cover) {
+  background: url($bgImg);
+  background-position: $bgPosition;
+  background-size: $bgSize;
+  background-repeat: no-repeat;
+}
+
+@mixin prefix($property, $value, $prefixes: moz webkit ms o) {
+  #{$property}: $value;
+  @each $prefix in $prefixes {
+    -#{$prefix}-#{$property}: $value;
+  }
+}
+
+@mixin hw($value){
+  height: $value;
+  width: $value;
+}
+
+@mixin flex-center-center {
+  @include prefix(display, flex);
+  @include prefix(justify-content, center);
+  @include prefix(align-items, center);
+}
+
+@mixin flex-start-start {
+  @include prefix(display, flex);
+  @include prefix(justify-content, flex-start);
+  @include prefix(align-items, flex-start);
+}
+
+@mixin flex-start-center {
+  @include prefix(display, flex);
+  @include prefix(justify-content, flex-start);
+  @include prefix(align-items, center);
+}
+
+@mixin flex-center-start {
+  @include prefix(display, flex);
+  @include prefix(justify-content, center);
+  @include prefix(align-items, flex-start);
+}
+
+@mixin flex-end-center {
+  @include prefix(display, flex);
+  @include prefix(justify-content, flex-end);
+  @include prefix(align-items, center);
+}
+
+@mixin flex-start-end {
+  @include prefix(display, flex);
+  @include prefix(justify-content, flex-start);
+  @include prefix(align-items, flex-end);
+}
+
+@mixin flex-between-start {
+  @include prefix(display, flex);
+  @include prefix(justify-content, space-between);
+  @include prefix(align-items, flex-start);
+}
+
+@mixin flex-between-end {
+  @include prefix(display, flex);
+  @include prefix(justify-content, space-between);
+  @include prefix(align-items, flex-end);
+}
+
+@mixin flex-between-center {
+  @include prefix(display, flex);
+  @include prefix(justify-content, space-between);
+  @include prefix(align-items, center);
+}
+
+@mixin flex-center-start-left {
+  @include prefix(display, flex);
+  @include prefix(justify-content, center);
+  @include prefix(align-items, flex-start);
+  @include prefix(flex-direction, column);
+}

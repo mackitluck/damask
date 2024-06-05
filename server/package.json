@@ -1,0 +1,19 @@
+{
+  "name": "damask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pkg package.json --targets node12-linux-x64"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.17.3",
+    "pkg": "^5.6.0"
+  }
+}

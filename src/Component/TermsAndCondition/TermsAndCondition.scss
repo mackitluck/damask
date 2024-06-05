@@ -1,0 +1,33 @@
+.PT-pages{
+  padding-top: 64px;
+  padding-bottom: 60px;
+  @include mobile{
+    padding-top: 31px;
+    padding-bottom: 40px;
+  }
+  h2{
+    margin-bottom: 36px;
+    @include mobile{
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 31px
+    }
+  }
+  label{
+    @include fonts(MyriadPro_Regular, #000000, 22px, 400, 28px, 0);
+    display: block;
+    margin-bottom: 8px;
+    @include mobile{
+      margin-bottom: 10px;
+      @include fonts(MyriadPro_Regular, #000000, 16px, 400, 24px, 0.15px);
+    }
+  }
+  p{
+    @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+    margin-bottom: 36px;
+    @include mobile{
+      margin-bottom: 26px;
+      @include fonts(MyriadPro_Regular, $high, 14px, 400, 20px, 0.25px);
+    }
+  }
+}

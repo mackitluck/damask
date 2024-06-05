@@ -1,0 +1,84 @@
+.product-box{
+  width: 100%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  .product-box-img, .product-box-img-effect{
+    position: relative;
+    overflow: hidden;
+  }
+  .product-box-img-effect{
+    img{
+      &:first-child{
+        @include prefix(transform, scale(1));
+        opacity: 1;
+        @include prefix(transition, all 300ms ease-in);
+      }
+    }
+  }
+  .product-box-img-effect{
+    img{
+      &:last-child{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+      }
+    }
+  }
+  .product-box-content{
+    padding: 18px;
+    text-align: center;
+    p.bm{
+      margin-bottom: 4px;
+    }
+    .product-box-price{
+      @include flex-center-center;
+      span{
+        display: block;
+        color: $mid;
+      }
+      del{
+        display: block;
+        margin-right: 8px;
+        color: $mid;
+        & + span{
+          color: $error;
+        }
+      }
+    }
+  }
+  .product-ingrediant{
+    position: absolute;
+    z-index: 2;
+    top: 12px;
+    left: -100%;
+    @include prefix(transition, all 300ms ease-in);
+    p{
+      text-transform: uppercase;
+    }
+  }
+  .heart{
+    position: absolute;
+    right: 16px;
+    top: -50px;
+    @include prefix(transition, all 300ms ease-in);
+  }
+  &:hover{
+    .product-box-img-effect{
+      img{
+        &:first-child{
+          @include prefix(transform, scale(1.5));
+          opacity: 0;
+        }
+      }
+    }
+    .product-ingrediant{
+      left: 12px;
+    }
+    .heart{
+      top: 16px;
+    }
+  }
+}

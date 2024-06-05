@@ -1,0 +1,366 @@
+.inspiration-listing {
+  padding-top: 80px;
+  @include mobile{
+    padding-top: 31px;
+  }
+  .IL-wrapper {
+    h2 {
+      text-align: center;
+      margin-bottom: 38px;
+      @include mobile{
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 13px
+      }
+    }
+    .dropdown-wrapper {
+      margin-bottom: 34px;
+    }
+    .row{
+      margin-left: -14px;
+      margin-right: -14px;
+      & > *{
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+    }
+    .first-block{
+      padding-bottom: 32px;
+      @include ultra-mobile{
+        padding-bottom: 1px;
+      }
+      .product-and-title{
+        margin-bottom: 16px;
+      }
+    }
+    .second-block{
+      padding: 64px 0;
+      @include flex-start-start;
+      @include tablet{
+        display: block;
+      }
+      @include ultra-mobile{
+        padding-top: 48px;
+        padding-bottom: 48px;
+      }
+      .img-wrapper{
+        width: 416px;
+        @include tablet{
+          width: 100%;
+        }
+      }
+      .content-wrapper{
+        width: calc(100% - 416px);
+        padding-top: 7px;
+        padding-left: 55px;
+        @include tablet{
+          width: 100%;
+          padding-left: 0;
+          padding-top: 35px;
+        }
+        h3{
+          margin-bottom: 19px;
+          @include mobile{
+            font-size: 28px;
+            line-height: 36px;
+            margin-bottom: 15px;
+          }
+        }
+        & > span.bm{
+          display: block;
+          margin-bottom: 18px;
+        }
+        p.bl{
+          margin-bottom: 24px;
+          position: relative;
+          &.review-ellipsis{
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            .review-read-more{
+              position: static;
+              position: absolute;
+              background-color: $white;
+              right: 2px;
+              bottom: 0;
+              padding-left: 6px;
+            }
+          }
+          .review-read-more{
+            position: static
+          }
+        }
+        .social-box-wrapper{
+          @include flex-start-center;
+          .social-boxes{
+            @include flex-start-center;
+            width: calc(100% - 80px);
+            .border-btn{
+              width: 33.33%;
+              margin-right: 16px;
+              padding-left: 16px;
+              padding-right: 6px;
+              @include ultra-mobile{
+                padding-left: 12px;
+                margin-right: 12px;
+              }
+              img{
+                height: 16px;
+                width: auto;
+              }
+              p.ts{
+                width: calc(100% - 16px);
+                text-align: center;
+              }
+              &:last-child{
+                margin-right: 0;
+                padding-right: 16px;
+              }
+              button{
+                @include flex-center-center;
+                width: 100%;
+                img{
+                  height: 16px;
+                  width: auto;
+                }
+                p.ts{
+                  width: calc(100% - 16px);
+                  text-align: center;
+                }
+              }
+            }
+          }
+          .share-block{
+            padding-left: 10px;
+            .share-data{
+              width: 100%;
+              @include flex-start-center;
+              img{
+                height: 32px;
+                width: 32px;
+              }
+              .share-content{
+                padding-left: 4px;
+                span{
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .third-block{
+      padding-top: 60px;
+      padding-bottom: 32px;
+      @include ultra-mobile{
+        padding-top: 28px;
+        padding-bottom: 14px;
+      }
+      .this-header{
+        text-align: center;
+        h4{
+          margin-bottom: 22px;
+          @include mobile{
+            margin-bottom: 14px;
+          }
+        }
+        .pages-link{
+          margin-bottom: 42px;
+          @include mobile{
+            margin-bottom: 34px;
+          }
+        }
+      }
+     
+      .tips-box{
+        display: block;
+        margin-bottom: 26px;
+        .img{
+          width: 100%;
+          overflow: hidden;
+          display: block;
+          img{
+            @include prefix(transition, all 300ms ease-in);
+          }
+        }
+        .content{
+          padding-top: 17px;
+          .title{
+            display: block;
+            margin-bottom: 9px;
+            h6{
+              @include prefix(transition, all 300ms ease-in);
+            }
+          }
+        }
+        &:hover{
+          .img{
+            cursor: pointer;
+            img{
+              @include prefix(transform, scale(1.02))
+            }
+          }
+          h6{
+            color: #9f1c69 !important;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .fourth-block{
+      padding-top: 60px;
+      padding-bottom: 16px;
+      @include ultra-mobile{
+        padding-top: 44px;
+        padding-bottom: 1px;
+      }
+      .this-header{
+        text-align: center;
+        h4{
+          margin-bottom: 22px;
+          @include mobile{
+            margin-bottom: 14px;
+          }
+        }
+        .pages-link{
+          margin-bottom: 42px;
+          @include mobile{
+            margin-bottom: 34px;
+          }
+        }
+      }
+      .product-and-title{
+        margin-bottom: 16px;
+      }
+    }
+    .fifth-block{
+      padding-top: 60px;
+      padding-bottom: 46px;
+      @include ultra-mobile{
+        padding-top: 44px;
+        padding-bottom: 24px;
+      }
+      .this-header{
+        text-align: center;
+        h4{
+          margin-bottom: 22px;
+          @include mobile{
+            margin-bottom: 14px;
+          }
+        }
+        .pages-link{
+          margin-bottom: 42px;
+          @include mobile{
+            margin-bottom: 34px;
+          }
+        }
+      }
+    }
+
+    .recipe-of-month{
+      padding-top: 64px;
+      padding-bottom: 48px;
+      @include ultra-mobile{
+        padding-top: 44px;
+        padding-bottom: 56px;
+      }
+      .ROM-wrapper{
+        position: relative;
+        @include flex-start-start;
+        @include tablet{
+          @include prefix(flex-wrap, wrap);
+          @include prefix(align-items, center);
+        }
+        .top-block{
+          position: absolute;
+          width: 320px;
+          top: 0;
+          right: 0;
+          text-align: right;
+          @include tablet{
+            position: static;
+            width: 100%;
+            margin-bottom: 48px;
+          }
+          h4{
+            margin-bottom: 28px;
+            @include tablet{
+              max-width: 320px;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+            }
+            @include mobile{
+              margin-bottom: 20px;
+            }
+          }
+          p.bl{
+            @include tablet{
+              max-width: 320px;
+              margin-left: auto;
+              margin-right: auto;
+              text-align: center;
+            }
+          }
+        }
+        .left-block{
+          width: calc(100% - 320px);
+          padding-right: 96px;
+          @include tablet{
+            width: 65%;
+            padding-right: 12px;
+          }
+          @include ultra-mobile{
+            width: 100%;
+            padding-right: 0;
+            margin-bottom: 8px;
+          }
+        }
+        .right-block{
+          width: 320px;
+          padding-top: 360px;
+          @include tablet{
+            padding-top: 0px;
+            width: 35%;
+            padding-left: 12px;
+          }
+          @include ultra-mobile{
+            width: 100%;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+  .product-and-title{
+    display: block;
+    .img{
+      width: 100%;
+      overflow: hidden;
+      img{
+        @include prefix(transition, all 300ms ease-in);
+      }
+    }
+    .content{
+      padding: 18px 10px;
+      text-align: center;
+    }
+    p.bm{
+      @include prefix(transition, all 300ms ease-in);
+    }
+    &:hover{
+      cursor: pointer;
+      .img{
+        img{
+          @include prefix(transform, scale(1.02))
+        }
+      }
+      p.bm{
+        color: $mid;
+      }
+    }
+  }
+}

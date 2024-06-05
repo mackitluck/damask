@@ -1,0 +1,113 @@
+.our-story{
+  padding-top: 63px;
+  @include mobile{
+    padding-top: 47px;
+  }
+  .layout-808{
+    max-width: 808px;
+    margin-left: auto;
+    margin-right: auto;
+    h1{
+      margin-bottom: 37px;
+      text-align: center;
+      @include mobile{
+        margin-bottom: 22px;
+        font-size: 36px;
+        line-height: 44px
+      }
+    }
+  }
+  
+  .our-story-header{
+   
+    padding-bottom: 84px;
+    text-align: center;
+    @include tablet{
+      
+      padding-bottom: 63px;
+    }
+   
+    h5{
+      @include mobile{
+        @include fonts(CapucineBasic, $high, 24px, 400, 32px, 0);
+      }
+    }
+  }
+  .our-story-box{
+    @include flex-between-center;
+    margin-bottom: 16px;
+    padding-top: 88px;
+    padding-bottom: 88px;
+    margin-left: -36.5px;
+    margin-right: -36.5px;
+    @include tablet{
+      margin-left: -12px;
+      margin-right: -12px;
+      padding-top: 64px;
+      padding-bottom: 54px;
+    }
+    @include ultra-mobile{
+      display: block;
+      margin-bottom: 0;
+    }
+    .OSB-img{
+      width: 50%;
+      padding-left: 36.5px;
+      padding-right: 36.5px;
+      @include tablet{
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      @include ultra-mobile{
+        width: 100%;
+        margin-bottom: 33px;
+      }
+    }
+    .OSB-content{
+      width: 50%;
+      padding-left: 36.5px;
+      padding-right: 36.5px;
+      @include tablet{
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      @include ultra-mobile{
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &.reverse{
+      .OSB-img{
+        order: 2;
+      }
+      .OSB-content{
+        order: 1;
+      }
+    }
+  }
+  .our-story-footer{
+    padding-top: 84px;
+    padding-bottom: 96px;
+    @include ultra-mobile{
+      padding-top: 68px;
+      padding-bottom: 80px;
+    }
+    h4{
+      margin-bottom: 52px;
+      text-align: center;
+      @include ultra-mobile{
+        margin-bottom: 36px;
+        text-align: center;
+      }
+    }
+    img{
+      margin-bottom: 72px;
+      @include ultra-mobile{
+        margin-bottom: 44px;
+      }
+    }
+    p.bl{
+
+    }
+  }
+}

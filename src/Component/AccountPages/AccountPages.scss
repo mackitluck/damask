@@ -1,0 +1,124 @@
+.account-page{
+  padding-top: 64px;
+  padding-bottom: 80px;
+  @include ultra-mobile{
+    padding-top: 24px;
+    padding-bottom: 56px;
+  }
+}
+.left-sides-bar {
+  background: $white;
+  position: relative;
+  padding-right: 24px;
+  @include desktop{
+    padding-right: 0;
+  }
+  @include mobile{
+    width: calc(100% + 24px);
+    margin-left: -12px;
+  }
+  ul.dropdowns-toggles {
+    padding-left: 0;
+    margin-bottom: 0;
+    padding-right: 0;
+    list-style-type: none;
+    overflow: hidden;
+    li {
+      padding: 8px 16px 8px 20px;
+      position: relative;
+      @include prefix(transition, all 300ms ease-in);
+      .sidebar-links {
+        @include fonts(MyriadPro_Regular, $mid, 16px, 400, 24px, 0.15px);
+        display: block;
+        @include prefix(transition, all 300ms ease-in);
+        position: relative;
+      }
+      &::before{
+        position: absolute;
+        content: "";
+        height: 100%;
+        width: 4px;
+        background-color: $high;
+        left: -4px;
+        top: 0px;
+        bottom: 0;
+        @include prefix(transition, all 300ms ease-in);
+        background-position: center;
+        background-size: cover;
+      }
+      &:hover{
+        .sidebar-links {
+          color: $high;
+          cursor: pointer;
+          @include prefix(transition, all 300ms ease-in);
+        }
+        &::before{
+          left: 0;
+        }
+      }
+      &.active {
+        position: relative;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        &::before{
+          left: 0;
+        }
+        .sidebar-links {
+          color: $high;
+        }
+      }
+    }
+    @include ultra-mobile{
+      position: absolute;
+      z-index: 53;
+      width: 100%;
+      background: $white;
+      padding: 15px 0;
+    }
+  }
+
+  .dropdowns{
+    @include ultra-mobile-above{
+      display: none;
+    }
+    @include ultra-mobile{
+      background: $surface;
+      margin-bottom: 0;
+      cursor: pointer;
+      position: relative;
+      padding: 12px 40px 12px 20px;
+      display: block;
+      text-decoration: none;
+      @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+      &::after{
+        content: "";
+        position: absolute;
+        @include background("../../Assets/img/chevron-down.svg");
+        @include hw(24px);
+        top: 50%;
+        right: 32px;
+        @include prefix(transform, translateY(-50%));
+        @include prefix(transition, all 300ms ease-in);
+      }
+      &.active{
+        &::after{
+          @include prefix(transform, translateY(-50%) rotate(-180deg));
+        }
+      }
+      & + ul{
+        display: none;
+      }
+      &.active + ul{
+        display: block;
+        top: 48px;
+      }
+    }
+  }
+}
+
+.right-side-content{
+  padding-left: 24px;
+  @include tablet{
+    padding-left: 0;
+  }
+}

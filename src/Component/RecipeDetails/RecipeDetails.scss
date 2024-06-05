@@ -1,0 +1,428 @@
+.recipe-details{
+  padding-top: 64px;
+  padding-bottom: 96px;
+  @include mobile{
+    padding-top: 31px;
+    padding-bottom: 48px
+  }
+  .RD-wrapper{
+    h2{
+      text-align: center;
+      margin-bottom: 52px;
+      @include mobile{
+        font-size: 36px;
+        line-height: 44px;
+        margin-bottom: 25px
+      }
+    }
+    .RD-content-wrapper{
+      @include flex-start-start;
+      @include tablet{
+        display: block;
+      }
+      .RD-main-content{
+        width: calc(100% - 288px);
+        padding-right: 48px;
+        @include tablet{
+          width: 100%;
+          padding-right: 0;
+        }
+        .this-content-box{
+          background-color: $surface;
+          padding: 32px 32px 8px;
+          margin-bottom: 64PX;
+          @include mobile{
+            padding: 24px 24px 8px;
+            margin-bottom: 47px
+          }
+          .this-head-sec{
+            @include flex-start-start;
+            margin-bottom: 39px;
+            @include tablet{
+              display: block;
+            }
+            @include mobile{
+              margin-bottom: 25px;
+            }
+            .this-video-wrapper{
+              width: calc(100% - 240px);
+              padding-right: 40px;
+              @include tablet{
+                width: 100%;
+                padding-right: 0;
+              }
+            }
+            .video-title-review{
+              width: 240px;
+              padding-top: 7px;
+              @include tablet{
+                width: 100%;
+                padding-top: 0;
+                margin-top: 23px;
+              }
+              h5{
+                margin-bottom: 7px;
+              }
+              .reviews-box{
+                @include flex-start-center;
+                img{
+                  @include hw(16px);
+                  margin-right: 6px;
+                  &:last-child{
+                    margin-right: 0;
+                  }
+                }
+                p.bm{
+                  margin-left: 12px;
+                }
+              }
+            }
+          }
+          .btn-wrapper{
+            @include flex-start-start;
+            border-top: 1px solid $line;
+            border-bottom: 1px solid $line;
+            padding: 16px 0;
+            margin-bottom: 36px;
+            .fill-btn{
+              @include mobile{
+                width: 100%;
+              }
+              &:first-child{
+                margin-right: 16px;
+                @include mobile{
+                  margin-right: 0;
+                  margin-bottom: 16px;
+                }
+              }
+            }
+            @include mobile{
+              display: block;
+              margin-bottom: 28px
+            }
+          }
+          .ck-content{
+            strong{
+              @include fonts(MyriadPro_Regular, $high, 22px, 400, 28px, 0);
+              margin-bottom: 8px;
+              display: block;
+              @include mobile{
+                margin-bottom: 12px;
+              }
+            }
+            ul{
+              padding-left: 22px;
+              margin-bottom: 44px;
+              @include mobile{
+                margin-bottom: 28px
+              }
+              li{
+                @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+                list-style-type: disc;
+              }
+            }
+            h6{
+              @include fonts(MyriadPro_Regular, $high, 22px, 400, 28px, 0);
+              margin-bottom: 24px;
+            }
+            ol {
+              list-style: none;
+              counter-reset: item;
+              padding-left: 0;
+              margin-bottom: 0;
+              li {
+                counter-increment: item;
+                margin-bottom: 24px;
+                padding-left: 31px;
+                position: relative;
+                @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+                &::before {
+                  position: absolute;
+                  @include fonts(MyriadPro_Bold, $high, 16px, 700, 24px, 0.15px);
+                  left: 0px;
+                  content: counter(item) ".";
+                  display: inline-block;
+                }
+              }
+            }
+            p{
+              @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+              margin-bottom: 24px;
+            }
+          } 
+        }
+        .join-community{
+          padding: 48px 32px;
+          background-color: $surface;
+          @include flex-start-start;
+          margin-bottom: 32px;
+          @include ultra-mobile{
+            display: block;
+            padding: 32px;
+          }
+          @include mobile{
+            padding: 24px;
+            margin-bottom: 32px;
+          }
+          .JC-content{
+            width: 272px;
+            padding-top: 4px;
+            @include ultra-mobile{
+              padding-top: 0;
+              width: 100%;
+            }
+            h4{
+              margin-bottom: 12px;
+              @include mobile{
+                font-size: 28px;
+                line-height: 36px;
+              }
+            }
+          }
+          .JC-field{
+            width: calc(100% - 272px);
+            padding-left: 48px;
+            @include ultra-mobile{
+              width: 100%;
+              padding-left: 0;
+              margin-top: 24px;
+            }
+            .input-groups{
+              margin-bottom: 16px;
+            }
+            .fill-btn{
+              width: 100%;
+            }
+          }
+        }
+        .social-box-wrapper{
+          @include flex-start-center;
+          margin-bottom: 39px;
+          .social-boxes{
+            @include flex-start-center;
+            width: calc(100% - 90px);
+            @include mobile{
+              width: calc(100% - 80px);
+            }
+            .border-btn{
+              width: 33.33%;
+              margin-right: 16px;
+              padding-left: 16px;
+              padding-right: 6px;
+              @include ultra-mobile{
+                padding-left: 12px;
+                margin-right: 12px;
+              }
+              img{
+                height: 16px;
+                width: auto;
+              }
+              p.ts{
+                width: calc(100% - 16px);
+                text-align: center;
+              }
+              &:last-child{
+                margin-right: 0;
+                padding-right: 16px;
+              }
+              button{
+                @include flex-center-center;
+                width: 100%;
+                img{
+                  height: 16px;
+                  width: auto;
+                }
+                p.ts{
+                  width: calc(100% - 16px);
+                  text-align: center;
+                }
+              }
+            }
+          }
+          .share-block{
+            padding-left: 20px;
+            @include mobile{
+              padding-left: 10px;
+            }
+            .share-data{
+              width: 100%;
+              @include flex-start-center;
+              img{
+                height: 32px;
+                width: 32px;
+              }
+              .share-content{
+                padding-left: 4px;
+                span{
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+        .reader-que-ans{
+          padding-top: 39px;
+          border-top: 1px solid $line;
+          h5{
+            margin-bottom: 29px;
+            @include mobile{
+              margin-bottom: 25px;
+            }
+          }
+          .received-review-wrapper, .sended-review-wrapper{
+            margin-bottom: 24px;
+            .this-review{
+              padding: 24px;
+              padding-bottom: 56px;
+              border: 1px solid $line;
+              position: relative;
+              @include mobile{
+                padding: 16px 24px;
+                padding-bottom: 56px
+              }
+              .this-review-header{
+                @include flex-between-start;
+                padding-bottom: 9px;
+                border-bottom: 1px solid $line;
+                .name-date{
+                  p.tm{
+                    margin-bottom: 2px
+                  }
+                  span.bm{
+                    display: block
+                  }
+                }
+                .reviews-box{
+                  @include flex-start-center;
+                  img{
+                    @include hw(16px);
+                    margin-right: 6px;
+                    &:last-child{
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
+              p.bl{
+                margin-top: 16px;
+              }
+              .border-btn{
+                width: 96px;
+                position: absolute;
+                bottom: -1px;
+                right: -1px;
+              }
+            }
+            .leave-review-box{
+              margin-top: 16px;
+              padding: 24px;
+            }
+          }
+          .sended-review-wrapper{
+            padding-left: 40px;
+            @include mobile{
+              padding-left: 24px;
+            }
+            .this-review{
+              background-color: $surface;
+              border: 0;
+            }
+          }
+          .leave-review-box{
+            margin-top: 48px;
+            border: 1px solid $line;
+            padding: 32px;
+            @include mobile{
+              padding: 24px;
+            }
+            h5{
+              margin-bottom: 5px;
+              @include mobile{
+                font-size: 24px;
+                line-height: 32px;
+              }
+            }
+            p.bl{
+              margin-bottom: 16px
+            }
+            .give-ratting-wrapper{
+              @include flex-start-center;
+              margin-bottom: 16px;
+              p.tm{
+                margin-right: 8px;
+              }
+              .rate-area {
+                span{
+                  display: block !important;
+                  img{
+                    float: unset;
+                  }
+                }
+                & > span{
+                  display: flex !important;
+                  justify-content: flex-start !important;
+                  align-items: center !important;
+                  span{
+                    @include hw(16px);
+                    margin-right: 6px;
+                  }
+                }
+              }
+            }
+            .input-groups{
+              margin-bottom: 32px;
+            }
+            .fill-btn{
+              width: 100%;
+            }
+            .row{
+              margin-left: -20px;
+              margin-right: -20px;
+              & > *{
+                padding-left: 20px;
+                padding-right: 20px;
+              }
+              @include tablet{
+                margin-left: -12px;
+                margin-right: -12px;
+                & > *{
+                  padding-left: 12px;
+                  padding-right: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .recent-post{
+        padding-top: 4px;
+        width: 288px;
+        @include tablet{
+          width: 100%; 
+          padding-top: 52px;
+        }
+        ul{
+          li{
+            list-style-type: none;
+            padding: 24px 0;
+            border-bottom: 1px solid $line;
+            &:last-child{
+              border-bottom: 0;
+            }
+            .recent-post-link{
+              margin-top: 16px;
+              display: block;
+              text-align: center;
+              @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+              @include prefix(transition, all 300ms ease-in);
+              &:hover{
+                cursor: pointer;
+                color: $mid;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

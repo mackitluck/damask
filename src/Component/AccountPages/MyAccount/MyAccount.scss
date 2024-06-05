@@ -1,0 +1,72 @@
+.my-account {
+  padding-top: 4px;
+  @include ultra-mobile {
+    padding-top: 23px;
+  }
+  h4 {
+    padding-bottom: 19px;
+    border-bottom: 1px solid $line;
+    @include mobile {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  .this-box-wrapper {
+    p.tm {
+      margin-bottom: 8px;
+    }
+    .redirect-links {
+      @include flex-start-center;
+      margin-top: 8px;
+      .pages-link {
+        margin-right: 33px;
+        position: relative;
+        &::after {
+          height: 16px;
+          width: 1px;
+          background-color: $line;
+          right: -17px;
+          position: absolute;
+          content: "";
+          top: 50%;
+          @include prefix(transform, translateY(-50%));
+        }
+        &:last-child {
+          margin-right: 0;
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .account-information {
+    padding-top: 20px;
+    padding-bottom: 39px;
+    border-bottom: 1px solid #c7cad1;
+    @include mobile {
+      padding-bottom: 25px;
+    }
+    p.tl {
+      margin-bottom: 16px;
+    }
+  }
+  .my-address-box {
+    padding-top: 20px;
+    .col-12 {
+      @include mobile {
+        margin-bottom: 24px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .header-and-link {
+    @include flex-start-center;
+    margin-bottom: 16px;
+    .pages-link {
+      margin-left: 32px;
+    }
+  }
+}

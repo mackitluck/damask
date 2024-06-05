@@ -1,0 +1,126 @@
+// .input-groups {
+//   & > label {
+//     display: block;
+//     margin-bottom: 8px;
+//     width: 100%;
+//     @include fonts(MyriadPro_Regular, $high, 12px, 400, 16px, 0.4px);
+//   }
+//   & > input{
+//     display: block;
+//     border: 1px solid $line;
+//     box-sizing: border-box;
+//     height: 48px;
+//     width: 100%;
+//     padding: 0 16px;
+//     outline: none !important;
+//     box-shadow: none !important;
+//     font-family: MyriadPro_Regular;
+//     @include prefix(border-radius, 0px);
+//     background: $white;
+//     font-size: 14px;
+//     letter-spacing: 0.25px;
+//     color: $high;
+//     &::placeholder {
+//       color: $mid;
+//     }
+//     &:focus {
+//       border-color: $high;
+//     }
+//     &.error{
+//       border-color: $error;
+//     }
+//   }
+//   & > select {
+//     border: 1px solid $line;
+//     box-sizing: border-box;
+//     height: 48px;
+//     width: 100%;
+//     padding: 0 16px;
+//     padding-right: 32px;
+//     outline: none !important;
+//     box-shadow: none !important;
+//     @include prefix(border-radius, 0px);
+//     background: $white;
+//     font-family: MyriadPro_Regular;
+//     font-size: 14px;
+//     letter-spacing: 0.25px;
+//     color: $high;
+//     background-image: url(../../../Assets/img/chevron-down.svg);
+//     background-position: calc(100% - 9px), calc(100% - 9px);
+//     background-size: 24px;
+//     background-repeat: no-repeat;
+//     &:focus {
+//       border-color: $high;
+//     }
+//     &.error{
+//       border-color: $error;
+//     }
+//   }
+//   & > textarea {
+//     border: 1px solid $line;
+//     box-sizing: border-box;
+//     height: 80px;
+//     width: 100%;
+//     display: block;
+//     padding: 8px 16px;
+//     outline: none !important;
+//     box-shadow: none !important;
+//     @include prefix(border-radius, 0px);
+//     background: transparent;
+//     font-size: 14px;
+//     letter-spacing: 0.25px;
+//     font-family: MyriadPro_Regular;
+//     color: $high;
+//     resize: vertical;
+//     &::placeholder {
+//       color: $mid;
+//     }
+//     &:focus {
+//       border-color: $high;
+//     }
+//     &.error{
+//       border-color: $error;
+//     }
+//   }
+// }
+// .input{
+//   display: block;
+//   border: 1px solid $line;
+//   box-sizing: border-box;
+//   height: 48px;
+//   width: 100%;
+//   padding: 0 16px;
+//   outline: none !important;
+//   box-shadow: none !important;
+//   font-family: MyriadPro_Regular;
+//   @include prefix(border-radius, 0px);
+//   background: $white;
+//   font-size: 14px;
+//   letter-spacing: 0.25px;
+//   color: $high;
+//   &::placeholder {
+//     color: $mid;
+//   }
+//   &:focus {
+//     border-color: $high;
+//   }
+// }
+// select {
+//   -moz-appearance: none;
+//   -webkit-appearance: none;
+//   appearance: none;
+// }
+// span.error {
+//   font-size: 12px;
+//   line-height: 16px;
+//   font-weight: 400;
+//   display: block;
+//   margin-top: 5px;
+//   letter-spacing: 0.4px;
+//   margin-bottom: 0;
+//   color: $error;
+//   width: 100%;
+// }
+
+
+

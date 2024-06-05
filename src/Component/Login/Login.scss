@@ -1,0 +1,16 @@
+.login{
+  .remember-forgot{
+    margin-top: 24px;
+    @include flex-between-center;
+  }
+  .fill-btn{
+    margin-top: 32px;
+    width: 100%;
+  }
+  .content-link{
+    margin-top: 26px;
+    .pages-link{
+      margin-left: 8px;
+    }
+  }
+}

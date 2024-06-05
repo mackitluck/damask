@@ -1,0 +1,37 @@
+.inc-dec-box {
+  @include flex-start-center;
+  button {
+    border: 0;
+    outline: 0 !important;
+    height: 24px;
+    width: 24px;
+    border-radius: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    background: transparent;
+    img{
+      height: 24px;
+      width: 24px;
+    }
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  input {
+    display: block;
+    border: 0;
+    outline: none;
+    width: unset;
+    min-width: 40px;
+    padding: 0;
+    max-width: 40px;
+    text-align: center;
+    font-family: MyriadPro_Bold;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    font-weight: bold;
+  }
+}

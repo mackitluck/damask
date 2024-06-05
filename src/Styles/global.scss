@@ -1,0 +1,81 @@
+@import "./color.scss";
+@import "./mixin.scss";
+@import "./media.scss";
+@import "./common.scss";
+
+@import "../Component/Common/Typo/Typo.scss";
+@import "../Component/Common/CustomeButton/CustomeButton.scss";
+@import "../Component/Common/CheckboxLabel/CheckboxLabel.scss";
+@import "../Component/Common/RadioLabel/RadioLabel.scss";
+@import "../Component/Common/InputGroups/InputGroups.scss";
+@import "../Component/Common/SelectGroups/SelectGroups.scss";
+@import "../Component/Common/TextareaGroups/TextareaGroups.scss";
+@import "../Component/Common/HeartLabel/HeartLabel.scss";
+@import "../Component/Common/Inc-Dec-box/Inc-Dec-box.scss";
+@import "../Component/Common/SimpleSteps/SimpleSteps.scss";
+
+
+
+@import "../Component/BadgeHeader/BadgeHeader.scss";
+@import "../Component/Header/Header.scss";
+@import "../Component/FooterWithMenu/FooterWithMenu.scss";
+@import "../Component/Header/WebMegaMenu/WebMegaMenu.scss";
+@import "../Component/Header/MobileMegaMenu/MobileMegaMenu.scss";
+@import "../Component/CheckoutBox/CheckoutBox.scss";
+@import "../Component/Common/ProductData/ProductData.scss";
+
+@import "../Component/Login/Login.scss";
+@import "../Component/SignUp/SignUp.scss";
+@import "../Component/ContactUs/ContactUs.scss";
+@import "../Component/OrderConfirmation/OrderConfirmation.scss";
+@import "../Component/LoginPopup/LoginPopup.scss";
+
+@import "../Component/AccountPages/AccountPages.scss";
+@import "../Component/AccountPages/MyOrder/MyOrder.scss";
+@import "../Component/AccountPages/OrderDetails/OrderDetails.scss";
+@import "../Component/AccountPages/Favorites/Favorites.scss";
+@import "../Component/AccountPages/MyAccount/MyAccount.scss";
+@import "../Component/AccountPages/MyAddresses/MyAddresses.scss";
+@import "../Component/AccountPages/AddNewAddress/AddNewAddress.scss";
+@import "../Component/AccountPages/AccountInformation/AccountInformation.scss";
+@import "../Component/AccountPages/NewsletterSubscription/NewsletterSubscription.scss";
+@import "../Component/AccountPages/DeleteAccount/DeleteAccount.scss";
+@import "../Component/AccountPages/DeleteAccount/AccountDeletionPopup/AccountDeletionPopup.scss";
+
+@import "../Component/ProductListing/ProductListing.scss";
+@import "../Component/Common/ProductBox/ProductBox.scss";
+
+@import "../Component/Checkout/Checkout.scss";
+@import "../Component/Digest/Digest.scss";
+@import "../Component/DigestDetails/DigestDetails.scss";
+@import "../Component/OurStory/OurStory.scss";
+
+@import "../Component/ProductDetails/ProductDetails.scss";
+
+@import "../Component/HomePage/HomePage.scss";
+
+@import "../Component/Loader/Loader.scss";
+@import "../Component/PaymentLoader/PaymentLoader.scss";
+@import "../Component/ProductDetails/FrostingPopup/FrostingPopup.scss";
+@import "../Component/ProductDetails/WriteReviewPopup/WriteReviewPopup.scss";
+@import "../Component/ProductDetails/ZoomPopup/ZoomPopup.scss";
+@import "../Component/Checkout/AddNewAddressPopup/AddNewAddressPopup.scss";
+
+@import "../Component/PageNotFound/PageNotFound.scss";
+@import "../Component/NoDataFound/NoDataFound.scss";
+@import "../Component/SomethingWrong/SomethingWrong.scss";
+@import "../Component/ForgotPassword/ForgotPassword.scss";
+@import "../Component/ResetPassword/ResetPassword.scss";
+
+@import "../Component/InspirationListing/InspirationListing.scss";
+@import "../Component/InspirationDetails/InspirationDetails.scss";
+@import "../Component/Common/BrowseBy/BrowseBy.scss";
+@import "../Component/RecipeDetails/RecipeDetails.scss";
+@import "../Component/RecipeLanding/RecipeLanding.scss";
+@import "../Component/RecipeListing/RecipeListing.scss";
+
+@import "../Component/PrivacyPolicy/PrivacyPolicy.scss";
+@import "../Component/TermsAndCondition/TermsAndCondition.scss";
+
+
+@import 'react-toastify/dist/ReactToastify.css';

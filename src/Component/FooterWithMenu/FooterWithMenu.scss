@@ -1,0 +1,268 @@
+.footer-with-menu{
+  background-color: $surface;
+  padding-top: 80px;
+  position: relative;
+  .P11{
+    position: absolute;
+    bottom: 111px;
+    left: 0;
+    width: 278px;
+    z-index: 0;
+    @include pattern-blur{
+      opacity: 0.6;
+    }
+    @include ultra-desktop-below{
+      width: 220px;
+    }
+    @include tablet{
+      display: none;
+    }
+  }
+  .P12{
+    position: absolute;
+    width: 278px;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    @include pattern-blur{
+      opacity: 0.6;
+    }
+    @include ultra-desktop-below{
+      width: 220px;
+    }
+    @include tablet{
+      display: none;
+    }
+  }
+  @include mobile{
+    padding-top: 64px;
+  }
+  .container{
+    @include mobile{
+      padding-left: 40px;
+      padding-right: 40px
+    }
+  }
+  .footer-row{
+    @include flex-start-start;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+    .footer-column{
+      width: 20%;
+      padding-left: 8px;
+      padding-right: 8px;
+      @include desktop{
+        width: 18%;
+      }
+      @include ultra-mobile{
+          width: 50%;
+          margin-bottom: 64px;
+      }
+      ul{
+        li{
+          display: block;
+          margin-bottom: 16px;
+          &:last-child{
+            margin-bottom: 0
+          }
+          .footer-links{
+            @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+            @include prefix(transition, all 300ms ease-in);
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            &::after{
+              position: absolute;
+              width: 100%;
+              content: '';
+              height: 2px;
+              background: $high;
+              bottom: 0;
+              left: -100%;
+              @include prefix(transition, all 200ms ease-in);
+            }
+            &:hover{
+              cursor: pointer;
+              &::after{
+                left: 0;
+              }
+            }
+          }
+        }
+      }
+      &.last-column{
+        @include desktop{
+          width: 28%;
+        }
+        @include ultra-mobile{
+          width: 50%;
+          margin-top: 2px;
+          margin-bottom: 0;
+        }
+        @include mobile{
+          width: 100%;
+        }
+        p.bl{
+          text-align: center;
+          margin-bottom: 24px;
+        }
+        .input-groups{
+          margin-bottom: 16px;
+        }
+        .border-btn{
+          width: 100%;
+          margin-bottom: 18px;
+          @include mobile{
+            margin-bottom: 26px;
+          }
+        }
+        span.bm{
+          display: block;
+          color: $mid;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .copy-right-section{
+    padding-top: 82px;
+    @include mobile{
+      padding-top: 56px
+    }
+    ul{
+      @include flex-start-start;
+      @include ultra-mobile{
+        @include prefix(justify-content, center);
+      }
+      @include mobile{
+        display: block;
+      }
+      li{
+        display: block;
+        margin-bottom: 0px;
+        margin-right: 48px;
+        @include mobile{
+          text-align: center;
+          margin-right: 0;
+          margin-bottom: 16px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+        &:last-child{
+          margin-right: 0
+        }
+        .footer-links{
+          @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+          @include prefix(transition, all 300ms ease-in);
+          display: block;
+          position: relative;
+          overflow: hidden;
+          @include mobile{
+            display: inline-block;
+          }
+          &::after{
+            position: absolute;
+            width: 100%;
+            content: '';
+            height: 2px;
+            background: $high;
+            bottom: 0;
+            left: -100%;
+            @include prefix(transition, all 200ms ease-in);
+          }
+          &:hover{
+            cursor: pointer;
+            &::after{
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+    .copy-content{
+      padding-top: 45px;
+      padding-bottom: 51px;
+      @include flex-between-center;
+      position: relative;
+      @include ultra-mobile{
+        padding-top: 98px;
+        padding-bottom: 60px;
+      }
+      @include mobile{
+        @include prefix(flex-direction, column);
+        text-align: center;
+        padding-top: 64px;
+        padding-bottom: 35px;
+      }
+      p{
+        .a{
+          color: $mid;
+          cursor: pointer;
+          @include prefix(transition, all 200ms ease-in);
+          &:hover{
+            color: $high;
+          }
+        }
+        @include mobile{
+          &:first-child{
+            margin-bottom: 16px
+          }
+        }
+      }
+      .f-date{
+        @include mobile{
+          order: 1;
+        }
+      }
+      .made-by{
+        @include mobile{
+          order: 2
+        }
+      }
+      .card-imgs{
+        @include flex-center-center;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        @include prefix(transform, translateX(-50%));
+        .card-links{
+          margin-right: 16px;
+          width: 38px;
+          cursor: pointer;
+          display: block;
+          &:last-child{
+            margin-right: 0;
+          }
+        }
+        @include ultra-mobile{
+          top: 42px;
+        }
+        @include mobile{
+          position: static;
+          top: unset;
+          left: unset;
+          @include prefix(transform, unset);
+          margin-top: 0px;
+          margin-bottom: 29px;
+        }
+      }
+    }
+  }
+  &.smallFooter{
+    padding-top: 0;
+    .footer-row{
+      display: none;
+    }
+    .copy-right-section{
+      padding-top: 48px;
+      @include mobile{
+        padding-top: 64px
+      }
+      ul{
+        @include prefix(justify-content, center);
+      }
+    }
+  }
+}

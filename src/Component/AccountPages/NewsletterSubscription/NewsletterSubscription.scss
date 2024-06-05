@@ -1,0 +1,27 @@
+.newsletter-subscription{
+  padding-top: 4px;
+  @include ultra-mobile{
+    padding-top: 23px;
+  }
+  h4{
+    padding-bottom: 19px;
+    border-bottom: 1px solid $line;
+    @include mobile{
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  .NS-wrapper{
+    padding-top: 20px;
+    p.tl{
+      margin-bottom: 24px;
+    }
+    .fill-btn{
+      margin-top: 32px;
+      width: 352px;
+      @include mobile{
+        width: 100%;
+      }
+    }
+  }
+}

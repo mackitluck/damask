@@ -1,0 +1,41 @@
+.badge-header{
+  background-color: $primary;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  @include mobile{
+    padding: 12px 0;
+  }
+  .bh-wrapper{
+    text-align: center;
+    position: relative;
+    p.ts{
+      color: $white;
+      text-transform: uppercase;
+      @include mobile{
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.5px;
+      }
+    }
+  }
+  .choose-link{
+    position: absolute;
+    display: block;
+    top: -2px;
+    left: 0;
+    @include flex-start-center;
+    cursor: pointer;
+    img{
+      @include hw(24px);
+      margin-right: 8px;
+    }
+    p.bm{
+      color: $white;
+    }
+    @include ultra-mobile{
+      display: none;
+    }
+  }
+}

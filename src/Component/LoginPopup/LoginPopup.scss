@@ -1,0 +1,31 @@
+.login-popup{
+  .modal-dialog{
+    @include mobile-above{
+      max-width: 416px;
+    }
+    .modal-body{
+      padding: 32px;
+      @include mobile{
+        padding: 32px 24px;
+      }
+      .input-groups{
+        margin-bottom: 32px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      .fill-btn{
+        width: 100%;
+      }
+      .pages-link{
+        margin-top: 26px;
+        margin-left: auto;
+        margin-bottom: 34px;
+      }
+      .or{
+        margin-top: 34px;
+        margin-bottom: 34px;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.simple-steps{
+  text-align: center;
+  padding-top: 84px;
+  padding-bottom: 88px;
+  .row{
+    margin-left: -14px;
+    margin-right: -14px;
+    & > *{
+      padding-left: 14px;
+      padding-right: 14px;
+      overflow: hidden;
+    }
+  }
+  @include ultra-mobile{
+    padding-bottom: 56px;
+  }
+  @include mobile{
+    padding-bottom: 24px;
+  }
+  h4{
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 92px;
+    @include ultra-mobile{
+      margin-bottom: 45px;
+    }
+    // &::before{
+    //   position: absolute;
+    //   content: '';
+    //   top: calc(-100% - 7px);
+    //   left: -36px;
+    //   height: 40px;
+    //   width: 60.98px;
+    //   background: url(../../../Assets/img/patternt-step.svg);
+    //   background-position: center;
+    //   background-size: cover;
+    // }
+  }
+  
+  .step-box{
+    text-align: center;
+    @include ultra-mobile{
+      @include flex-start-start;
+      margin-bottom: 32px
+    }
+    .row{
+      & > *{
+        overflow: hidden
+      }
+    }
+    img{
+      @include hw(120px);
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 44px;
+      @include ultra-mobile{
+        margin-bottom: 0;
+      }
+      @include mobile{
+        @include hw(80px);
+      }
+    }
+    .step-box-content{
+      @include ultra-mobile{
+        text-align: left;
+        width: calc(100% - 120px);
+        padding-left: 16px;
+      }
+      @include mobile{
+        width: calc(100% - 80px);
+      }
+    }
+    p.tl{
+      margin-bottom: 16px;
+      @include mobile{
+        @include fonts(MyriadPro_Bold, $high, 16px, 700, 24px, 0.15px);
+        margin-bottom: 0;
+      }
+    }
+    span.bl{
+      display: block;
+      @include mobile{
+        color: $mid;
+      }
+    }
+  }
+  
+}

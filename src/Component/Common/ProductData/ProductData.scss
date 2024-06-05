@@ -1,0 +1,37 @@
+.product-data{
+  @include flex-start-start;
+  .PD-img{
+    @include hw(80px);
+    img{
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .PD-content{
+    width: calc(100% - 80px);
+    padding-left: 16px;
+    p.bm{
+      margin-bottom: 4px;
+    }
+    .product-price{
+      margin-bottom: 10px;
+      @include flex-start-center;
+      del{
+        margin-right: 4px;
+        display: block;
+        + span{
+          color: $error;
+        }
+      }
+      span{
+        display: block;
+        color: $mid;
+      }
+    }
+    label.bm{
+      margin-bottom: 0;
+      display: block;
+    }
+  }
+}

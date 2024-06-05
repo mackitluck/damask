@@ -1,0 +1,630 @@
+// @font-face {
+//   font-family: CapucineBasic;
+//   src: url("../Assets/fonts/CapucineBasic-Regular.otf");
+// }
+// @font-face {
+//   font-family: MyriadPro_Bold;
+//   src: url("../Assets/fonts/MyriadPro-Bold.otf");
+// }
+// @font-face {
+//   font-family: MyriadPro_Regular;
+//   src: url("../Assets/fonts/MyriadPro-Regular.otf");
+// }
+
+@font-face {
+  font-family: CapucineBasic;
+  src: url("../Assets/fonts/SUNN-Serif-Bold.otf");
+}
+@font-face {
+  font-family: MyriadPro_Bold;
+  src: url("../Assets/fonts/Poppins-SemiBold.ttf");
+}
+@font-face {
+  font-family: MyriadPro_Regular;
+  src: url("../Assets/fonts/Poppins-Regular.ttf");
+}
+
+* {
+  outline: none !important;
+}
+
+body {
+  font-family: MyriadPro_Regular;
+  position: relative;
+  // user-select: none;
+}
+
+.data-hidden{
+  overflow: hidden;
+}
+
+
+@media (min-width: 1300px){
+  .container {
+    max-width: 1224px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (min-width: 576px){
+  .row{
+    margin-left: -12px;
+    margin-right: -12px;
+    & > *{
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+  }
+}
+
+@media (max-width: 575px){
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .row{
+    margin-left: -8px !important;
+    margin-right: -8px !important;
+    & > *{
+      padding-left: 8px !important;
+      padding-right: 8px !important;
+    }
+  }
+}
+
+
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+a:hover {
+  text-decoration: none;
+  @include prefix(transition, all 300ms ease-in);
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.blur-color {
+  color: $mid !important;
+}
+
+.error-color{
+  color: $error !important;
+}
+
+/* Remove inner shadow from inputs on mobile iOS */
+textarea,
+input {
+  -webkit-appearance: none;
+  @include prefix(border-radius, 0);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include fonts(CapucineBasic, $high, 57px, 400, 64px, 0);
+}
+h2 {
+  @include fonts(CapucineBasic, $high, 45px, 400, 52px, 0);
+}
+h3 {
+  @include fonts(CapucineBasic, $high, 36px, 400, 44px, 0);
+}
+h4 {
+  @include fonts(MyriadPro_Regular, $high, 32px, 400, 40px, 0);
+}
+h5 {
+  @include fonts(MyriadPro_Regular, $high, 28px, 400, 36px, 0);
+}
+h6 {
+  @include fonts(CapucineBasic, $high, 24px, 400, 32px, 0);
+}
+
+.tl {
+  @include fonts(MyriadPro_Regular, $high, 22px, 400, 28px, 0);
+}
+.tm {
+  @include fonts(MyriadPro_Bold, $high, 16px, 700, 24px, 0.15px);
+}
+.ts {
+  @include fonts(MyriadPro_Bold, $high, 14px, 700, 20px, 1px);
+}
+
+.ll {
+  @include fonts(MyriadPro_Bold, $high, 14px, 700, 20px, 0.1px);
+}
+.lm {
+  @include fonts(MyriadPro_Bold, $high, 12px, 700, 16px, 0.5px);
+}
+.ls {
+  @include fonts(MyriadPro_Regular, $high, 11px, 500, 16px, 0.5px);
+}
+
+.bl {
+  @include fonts(MyriadPro_Regular, $high, 16px, 400, 24px, 0.15px);
+}
+.bm {
+  @include fonts(MyriadPro_Regular, $high, 14px, 400, 20px, 0.25px);
+}
+.bs {
+  @include fonts(MyriadPro_Regular, $high, 12px, 400, 16px, 0.4px);
+}
+
+
+
+.input-groups {
+  & > label {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+    @include fonts(MyriadPro_Regular, $high, 12px, 400, 16px, 0.4px);
+  }
+  & > input{
+    display: block;
+    border: 1px solid $line;
+    box-sizing: border-box;
+    height: 48px;
+    width: 100%;
+    padding: 0 16px;
+    outline: none !important;
+    box-shadow: none !important;
+    font-family: MyriadPro_Regular;
+    @include prefix(border-radius, 0px);
+    background: $white;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    color: $high;
+    &::placeholder {
+      color: $mid;
+    }
+    &:focus {
+      border-color: $high;
+    }
+    &.error{
+      border-color: $error;
+    }
+  }
+  & > select {
+    border: 1px solid $line;
+    box-sizing: border-box;
+    height: 48px;
+    width: 100%;
+    padding: 0 16px;
+    padding-right: 32px;
+    outline: none !important;
+    box-shadow: none !important;
+    @include prefix(border-radius, 0px);
+    background: $white;
+    font-family: MyriadPro_Regular;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    color: $high;
+    background-image: url(../Assets/img/chevron-down.svg);
+    background-position: calc(100% - 9px), calc(100% - 9px);
+    background-size: 24px;
+    background-repeat: no-repeat;
+    &:focus {
+      border-color: $high;
+    }
+    &.error{
+      border-color: $error;
+    }
+  }
+  & > textarea {
+    border: 1px solid $line;
+    box-sizing: border-box;
+    height: 96px;
+    width: 100%;
+    display: block;
+    padding: 8px 16px;
+    outline: none !important;
+    box-shadow: none !important;
+    @include prefix(border-radius, 0px);
+    background: transparent;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    font-family: MyriadPro_Regular;
+    color: $high;
+    resize: vertical;
+    &::placeholder {
+      color: $mid;
+    }
+    &:focus {
+      border-color: $high;
+    }
+    &.error{
+      border-color: $error;
+    }
+  }
+}
+.input{
+  display: block;
+  border: 1px solid $line;
+  box-sizing: border-box;
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  outline: none !important;
+  box-shadow: none !important;
+  font-family: MyriadPro_Regular;
+  @include prefix(border-radius, 0px);
+  background: $white;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  color: $high;
+  &::placeholder {
+    color: $mid;
+  }
+  &:focus {
+    border-color: $high;
+  }
+  &.error{
+    border-color: $error;
+  }
+}
+.select {
+  border: 1px solid $line;
+  box-sizing: border-box;
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  padding-right: 32px;
+  outline: none !important;
+  box-shadow: none !important;
+  @include prefix(border-radius, 0px);
+  background: $white;
+  font-family: MyriadPro_Regular;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  color: $high;
+  background-image: url(../Assets/img/chevron-down.svg);
+  background-position: calc(100% - 9px), calc(100% - 9px);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  &:focus {
+    border-color: $high;
+  }
+  &.error{
+    border-color: $error;
+  }
+}
+.textarea {
+  border: 1px solid $line;
+  box-sizing: border-box;
+  height: 96px;
+  width: 100%;
+  display: block;
+  padding: 8px 16px;
+  outline: none !important;
+  box-shadow: none !important;
+  @include prefix(border-radius, 0px);
+  background: transparent;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  font-family: MyriadPro_Regular;
+  color: $high;
+  resize: vertical;
+  &::placeholder {
+    color: $mid;
+  }
+  &:focus {
+    border-color: $high;
+  }
+  &.error{
+    border-color: $error;
+  }
+}
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+span.error {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  display: block;
+  margin-top: 5px;
+  letter-spacing: 0.4px;
+  margin-bottom: 0;
+  color: $error;
+  width: 100%;
+}
+
+
+
+.share-icon{
+  display: block;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  @include background("../Assets/img/State=Default.svg");
+  @include prefix(transition, all 300ms ease-in);
+  &:hover{
+    @include background("../Assets/img/State=Hovered.svg");
+  }
+}
+
+
+.show-768{
+  @include ultra-mobile{
+    display: none;
+  }
+}
+.hide-767{
+  @include ultra-mobile-above{
+    display: none;
+  }
+}
+.show-992{
+  @include tablet{
+    display: none;
+  }
+}
+.hide-991{
+  @include tablet-above{
+    display: none;
+  }
+}
+
+
+body{
+  * {
+    scrollbar-color: $high #F5F5F5;
+    scrollbar-width: thin;
+    &::-webkit-scrollbar-track{
+	    background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar{
+      width: 5px;
+	    background-color: #F5F5F5;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: $high;
+    }
+  }
+}
+
+
+
+.form-section{
+  padding-top: 64px;
+  padding-bottom: 90px;
+  @include large-tablet{
+    min-height: calc(100vh - 680px);
+  }
+  @include mobile{
+    padding-top: 47px;
+    padding-bottom: 45px;
+  }
+  h2{
+    text-align: center;
+    margin-bottom: 52px;
+    @include mobile{
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 45px;
+    }
+  }
+  .input-groups{
+    margin-bottom: 32px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.max-352{
+  max-width: 352px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pages-link{
+  display: inline-block;
+  @include fonts(MyriadPro_Regular, $high, 14px, 400, 16px, 0.25px);
+  text-decoration: none;
+  border-bottom: 1px solid $high;
+  @include prefix(transition, all 300ms ease-in);
+  &:hover{
+    text-decoration: none;
+    border-bottom-color: transparent;
+    color: $mid;
+    cursor: pointer;
+  }
+}
+
+.hr{
+  border-top: 1px solid $line;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-content{
+  @include prefix(border-radius, 0px);
+  border: 0;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.or{
+  height: 20px;
+  position: relative;
+  text-align: center;
+  &::before{
+    position: absolute;
+    content: '';
+    width: calc(50% - 16px);
+    left: 0;
+    top: 50%;
+    border-top: 1px solid $line;
+    @include prefix(transform, translateY(-50%))
+  }
+  &::after{
+    position: absolute;
+    content: '';
+    width: calc(50% - 16px);
+    right: 0;
+    top: 50%;
+    border-top: 1px solid $line;
+    @include prefix(transform, translateY(-50%))
+  }
+}
+
+
+
+
+.add-btn{
+  @include hw(24px);
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
+  display: block;
+}
+
+.video-wrapper{
+  position: relative;
+  .y-icon{
+    width: 48px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include prefix(transform, translate(-50%, -50%));
+  }
+}
+
+.iframe-container{
+  position: relative;
+  width: 100%;
+  padding-bottom:57.45%;
+  height: 0;
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .product-and-title, & > a{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.Toastify__toast-container--top-center{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: unset;
+  padding: 0;
+  width: 100%;
+  .Toastify__toast{
+    min-height: 56px;
+    padding: 18px 48px 18px 16px;
+    margin-bottom: 0;
+    @include prefix(border-radius, 0px);
+    @include prefix(box-shadow, none);
+    .Toastify__toast-body{
+      padding: 0;
+      @include fonts(MyriadPro_Regular, $high, 14px, 400, 20px, 0.25px);
+      .Toastify__toast-icon{
+        display: none;
+      }
+    }
+    &::before{
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 4px;
+    }
+    &.Toastify__toast--success{
+      background-color: #EBF7ED;
+      &::before{
+        background-color: #009D1F;
+      }
+    }
+    &.Toastify__toast--error{
+      background-color: #FFF1F0;
+      &::before{
+        background-color: #F94C43;
+      }
+    }
+    &.Toastify__toast--info{
+      background-color: #eefbfa;
+      &::before{
+        background-color: #39C9C6;
+      }
+    }
+    &.Toastify__toast--warning{
+      background-color: #fffaec;
+      &::before{
+        background-color: #EEC200;
+      }
+    }
+    &.Toastify__toast--default{
+      background-color: #F7F7F7;
+      &::before{
+        background-color: #ADADAD;
+      }
+    }
+    .Toastify__close-button{
+      @include hw(24px);
+      position: absolute;
+      top: 50%;
+      @include prefix(transform, translateY(-50%));
+      right: 16px;
+      @include background("../Assets/img/close.svg");
+      svg{
+        display: none;
+      }
+    }
+  }
+}

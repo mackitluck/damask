@@ -1,0 +1,47 @@
+.no-data-found{
+  padding-top: 96px;
+  padding-bottom: 96px;
+  @include mobile{
+    padding-top: 24px;
+    padding-bottom: 80px;
+  }
+  .PNF-wrapper{
+    @include flex-between-center;
+    @include ultra-mobile{
+      @include prefix(flex-direction, column-reverse);
+    }
+    .PNF-content{
+      width: 320px;
+      @include mobile{
+        width: 100%
+      }
+      h2{
+        margin-bottom: 16px;
+        @include mobile{
+          font-size: 36px;
+          line-height: 44px;
+        }
+      }
+      p.bl{
+
+      }
+      .fill-btn{
+        width: 184px;
+        margin-top: 24px;
+        @include mobile{
+          width: 100%;
+        }
+      }
+    }
+    img{
+      width: 392px;
+      @include tablet{
+        width: calc(100% - 350px);
+      }
+      @include ultra-mobile{
+        width: 273px;
+        margin-bottom: 31px;
+      }
+    }
+  }
+}

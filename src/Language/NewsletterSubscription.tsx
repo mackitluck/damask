@@ -1,0 +1,8 @@
+const NEWSLETTER_SUBSCRIPTION = {
+    NEWSLETTER_SUBSCRIPTION: 'Newsletter Subscription',
+    NEWSLETTER_SUBSCRIPTION_OPTION: 'Subscription option',
+    NEWSLETTER_SUBSCRIPTION_GENERAL: 'General Subscription',
+    NEWSLETTER_SUBSCRIPTION_SAVE: 'Save',
+}
+
+export default NEWSLETTER_SUBSCRIPTION;

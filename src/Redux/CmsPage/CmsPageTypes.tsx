@@ -1,0 +1,6 @@
+export const CMS_PAGE_REQUEST = "CMS_PAGE_REQUEST";
+export const CMS_PAGE_SUCCESS = "CMS_PAGE_SUCCESS";
+export const CMS_PAGE_FAILD = "CMS_PAGE_FAILD";
+export const CMS_PAGE_CLEAR = "CMS_PAGE_CLEAR";
+export const CMS_PAGE_LONG = "CMS_PAGE_LONG";
+export const CMS_PAGE_NO_DATA = "CMS_PAGE_NO_DATA";

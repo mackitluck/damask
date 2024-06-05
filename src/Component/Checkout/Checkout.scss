@@ -1,0 +1,460 @@
+.checkout {
+  padding-top: 64px;
+  padding-bottom: 88px;
+
+  @include mobile {
+    padding-top: 47px;
+    padding-bottom: 72px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include mobile {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 25px;
+    }
+  }
+
+  .checkout-layout {
+    @include flex-start-start;
+    flex-wrap: wrap;
+
+    .checkout-content {
+      width: calc(100% - 416px);
+      padding-right: 64px;
+
+      @include desktop {
+        padding-right: 48px;
+        width: calc(100% - 352px);
+      }
+
+      @include tablet {
+        width: 100%;
+        padding-right: 0;
+      }
+
+      .delivery-address {
+        margin-bottom: 36px;
+
+        @include mobile {
+          margin-bottom: 28px;
+        }
+
+        p.tl {
+          margin-bottom: 24px;
+        }
+
+        .row {
+          margin-left: -20px;
+          margin-right: -20px;
+
+          &>* {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          @include ultra-mobile {
+            margin-left: -12px;
+            margin-right: -12px;
+
+            &>* {
+              padding-left: 12px;
+              padding-right: 12px;
+            }
+          }
+        }
+
+        .input-groups {
+          margin-bottom: 32px;
+        }
+
+        .mb-27 {
+          margin-bottom: 27px;
+        }
+
+        .mb-32 {
+          margin-bottom: 32px;
+        }
+      }
+
+      .DA-default {
+        margin-bottom: 68px;
+
+        @include mobile {
+          margin-bottom: 28px;
+        }
+
+        p.tl {
+          margin-bottom: 24px;
+        }
+
+        .DA-box {
+          padding: 18px 16px;
+          border: 1px solid $line;
+          margin-bottom: 32px;
+          position: relative;
+
+          @include mobile {
+            padding-bottom: 34px;
+          }
+
+          p.bm {
+            margin-bottom: 4px;
+            color: $mid;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+
+          .pages-link {
+            position: absolute;
+            bottom: 18px;
+            right: 16px;
+          }
+
+          &.active {
+            border-color: $high;
+
+            @include mobile {
+              padding-bottom: 18px;
+            }
+
+            p.bm {
+              color: $high;
+            }
+
+            .pages-link {
+              display: none;
+            }
+          }
+        }
+
+        .border-btn {
+          width: 100%;
+        }
+      }
+
+      .billing-address {
+        margin-bottom: 68px;
+
+        @include mobile {
+          margin-bottom: 60px;
+        }
+
+        p.tl {
+          margin-bottom: 24px;
+        }
+
+        .rd {
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .add-billing-address {
+        margin-bottom: 36px;
+
+        @include mobile {
+          margin-bottom: 28px;
+        }
+
+        p.tl {
+          margin-bottom: 24px;
+        }
+
+        .row {
+          margin-left: -20px;
+          margin-right: -20px;
+
+          &>* {
+            padding-left: 20px;
+            padding-right: 20px;
+          }
+
+          @include ultra-mobile {
+            margin-left: -12px;
+            margin-right: -12px;
+
+            &>* {
+              padding-left: 12px;
+              padding-right: 12px;
+            }
+          }
+        }
+
+        .input-groups {
+          margin-bottom: 32px;
+        }
+
+        .mb-27 {
+          margin-bottom: 27px;
+        }
+
+        .mb-32 {
+          margin-bottom: 32px;
+        }
+      }
+
+      .delivery {
+        margin-bottom: 68px;
+
+        @include mobile {
+          margin-bottom: 60px;
+        }
+
+        p.tl {
+          margin-bottom: 24px;
+        }
+
+        .rd {
+          margin-bottom: 20px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .payment {
+        margin-bottom: 20px;
+        .paypal-image-points{
+          .card-imgs{
+            .card-links{
+              margin-right: 16px;
+              width: 38px;
+                &:last-child{
+                margin-right: 0;
+              }
+            }
+            @include ultra-mobile{
+              // top: 42px;
+            }
+            @include mobile{
+              // margin-bottom: 29px;
+            }
+          }
+        }
+        @include mobile {
+          margin-bottom: 64px;
+        }
+
+        p.tl {
+          margin-bottom: 24px;
+        }
+
+        .rd {
+          margin-bottom: 20px;
+          white-space: nowrap;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .rd-checkmark {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        .payment-img {
+          @include flex-start-center;
+
+          p {
+            width: 101px;
+
+            @include mini-mobile {
+              width: 75px;
+            }
+          }
+
+          img {
+            height: 22px;
+            width: auto;
+            margin-left: 16px;
+
+            @include mini-mobile {
+              margin-left: 12px;
+            }
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+        .paypal_text{
+          margin-bottom: 18px;
+        }
+      }
+
+      .giving-gift {
+        margin-bottom: 32px;
+
+        .gift-title {
+          @include flex-start-center;
+          margin-bottom: 10px;
+
+          img {
+            @include hw(24px);
+            margin-right: 8px;
+          }
+        }
+
+        .ck {
+          color: $mid;
+          margin-bottom: 16px;
+        }
+
+        .hide {
+          display: none;
+        }
+      }
+
+      .fill-btn {
+        width: 100%;
+      }
+    }
+
+    .checkout-box-layout {
+      width: 416px;
+      border: 1px solid $line;
+      padding: 24px;
+
+      @include desktop {
+        width: 352px;
+      }
+
+      @include tablet {
+        width: 100%;
+        margin-top: 64px;
+      }
+
+      .product-data {
+        margin-bottom: 24px;
+      }
+
+      .calculate-table {
+        margin-bottom: 10px;
+
+        .hr {
+          border-top: 1px solid $line;
+          width: 100%;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+
+        .value-table,
+        .total-table {
+          width: 100%;
+          border: 0;
+          padding: 0;
+          border-collapse: collapse;
+
+          tr {
+            td {
+              padding-top: 6px;
+              padding-bottom: 6px;
+
+              &:last-child {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+
+      .promo-box {
+        height: 24px;
+        width: 100%;
+
+        .detail-box {
+          @include flex-start-center;
+
+          p {
+            width: calc(100% - 24px);
+          }
+
+          img {
+            @include hw(24px);
+            cursor: pointer;
+          }
+        }
+
+        .enter-detail-box {
+          @include flex-start-center;
+
+          input {
+            border: 0 !important;
+            outline: none !important;
+            box-shadow: none !important;
+            height: 24px;
+            padding: 0;
+            width: calc(100% - 80px);
+            color: $high;
+            font-size: 14px;
+            letter-spacing: 0.25px;
+
+            &::placeholder {
+              color: $mid;
+            }
+          }
+
+          img {
+            @include hw(24px);
+            cursor: pointer;
+            margin-left: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.card-input-wrapper {
+  /* max-width: 352px; */
+  background: #efdada;
+  padding: 20px;
+  width: 100% !important;
+  max-width: 70%;
+  border-radius: 10px;
+
+  .col-12 {
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    width: 100%;
+    @include fonts(MyriadPro_Regular, $high, 12px, 400, 16px, 0.4px);
+  }
+
+
+}
+
+.Input--empty {
+  display: block;
+  border: 1px solid $line;
+  box-sizing: border-box;
+  height: 48px;
+  width: 100%;
+  padding: 0 16px;
+  outline: none !important;
+  box-shadow: none !important;
+  font-family: MyriadPro_Regular;
+  @include prefix(border-radius, 0px);
+  background: $white;
+  font-size: 14px;
+  letter-spacing: 0.25px;
+  color: $high;
+
+  &::placeholder {
+    color: $mid;
+  }
+}

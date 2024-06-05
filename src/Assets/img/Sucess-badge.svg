@@ -1,0 +1,9 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Sucess badge">
+<path id="Star" fill-rule="evenodd" clip-rule="evenodd" d="M48 86.5234L38.6357 95.0777L33.2577 83.591L21.3326 87.9105L20.7598 75.2402L8.08946 74.6674L12.409 62.7423L0.922307 57.3643L9.47656 48L0.922307 38.6357L12.409 33.2577L8.08946 21.3326L20.7598 20.7598L21.3326 8.08946L33.2577 12.409L38.6357 0.922307L48 9.47656L57.3643 0.922307L62.7423 12.409L74.6674 8.08946L75.2402 20.7598L87.9105 21.3326L83.591 33.2577L95.0777 38.6357L86.5234 48L95.0777 57.3643L83.591 62.7423L87.9105 74.6674L75.2402 75.2402L74.6674 87.9105L62.7423 83.591L57.3643 95.0777L48 86.5234Z" fill="#3EB658"/>
+<g id="check">
+<rect id="Rectangle" opacity="0.01" x="24" y="24" width="48" height="48" fill="#D8D8D8"/>
+<path id="Path" d="M60 40L43.5 56L36 48.7273" stroke="white" stroke-width="3.52" stroke-linecap="square" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>

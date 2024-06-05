@@ -1,0 +1,5 @@
+export const RECIPE_REQUEST = "RECIPE_REQUEST";
+export const RECIPE_SUCCESS = "RECIPE_SUCCESS";
+export const RECIPE_FAILD = "RECIPE_FAILD";
+export const RECIPE_CLEAR = "RECIPE_CLEAR";
+export const RECIPE_LONG = "RECIPE_LONG";

@@ -1,0 +1,253 @@
+.side-menu {
+  position: fixed;
+  width: 360px;
+  background: #fff;
+  top: 40px;
+  height: calc(100vh - 40px);
+  left: -360px;
+  transition: all 300ms ease;
+  z-index: 999;
+  @include iphone{
+    width: 100%;
+    left: -100%;
+  }
+  &.active {
+    left: 0;
+    transition: all 300ms ease;
+  }
+
+  .side-menu-header{
+    @include flex-between-center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 32px;
+    position: relative;
+    .side-logo{
+      // @include hw(40px);
+      height: 48px;
+      img{
+        height: 100%;
+        width: auto;
+      }
+    }
+    .choose-link{
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      @include prefix(transform, translate(-50%, -50%));
+      @include flex-start-center;
+      cursor: pointer;
+      img{
+        @include hw(24px);
+        margin-right: 8px;
+      }
+    }
+    .close-sidebar{
+      @include hw(24px);
+    }
+  }
+
+  .scroll-side-menu{
+    padding-left: 24px;
+    padding-right: 24px;
+    height: calc(100% - 88px);
+    overflow-y: auto;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  .level-1 {
+    margin-bottom: 24px;
+    & > li {
+      list-style-type: none;
+      .level-2 {
+        padding-left: 24px;
+        padding-right: 24px;
+        height: 0;
+        overflow: hidden;
+        & > li {
+          list-style-type: none;
+          .level-3 {
+            padding-left: 24px;
+            padding-right: 24px;
+            height: 0;
+            overflow: hidden;
+            & > li {
+              list-style-type: none;
+              // .level-4 {
+              
+              //   height: 0;
+              //   overflow: hidden;
+              //   li {
+              //     color: #272833;
+              //     padding: 8px 35px;
+              //     &:last-child {
+              //       margin-bottom: 8px;
+              //     }
+              //   }
+              // }
+              // .links {
+              //   display: block;
+              //   position: relative;
+              //   &.arrow {
+              //     &::after {
+              //       position: absolute;
+              //       content: "";
+              //       width: 16px;
+              //       height: 16px;
+              //       right: 12px;
+              //       top: 50%;
+              //       transform: translateY(-50%);
+              //       background: url(../../../Assets/img/chevron-down.svg);
+              //       background-position: center;
+              //       background-size: cover;
+              //       transition: all 0.2s;
+              //     }
+              //   }
+              //   &.arrow {
+              //     &.show {
+              //       &::after {
+              //         transform: translateY(-50%) rotate(-180deg);
+              //       }
+              //       background-color: $white;
+              //       & + .level-4 {
+              //         height: auto;
+              //       }
+              //     }
+              //   }
+              // }
+              .links{
+                padding-right: 16px;
+              }
+              &:last-child {
+                margin-bottom: 8px;
+              }
+            }
+          }
+          .links {
+            // padding: 10px 8px;
+            // color: #154293;
+            display: block;
+            position: relative;
+            &.arrow {
+              &::after {
+                position: absolute;
+                content: "";
+                width: 16px;
+                height: 16px;
+                right: 12px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: url(../../../Assets/img/chevron-down.svg);
+                background-position: center;
+                background-size: cover;
+                transition: all 0.2s;
+              }
+            }
+            &.arrow {
+              &.show {
+                & + .level-3 {
+                  height: auto;
+                }
+                &::after {
+                  transform: translateY(-50%) rotate(-180deg);
+                }
+                background-color: $white;
+                // background: #ffbc77;
+                // border-bottom: 2px solid #fff;
+              }
+            }
+          }
+          &:last-child {
+            margin-bottom: 8px;
+          }
+        }
+      }
+      .links {
+        // padding: 10px 40px 10px 16px;
+        // color: #154293;
+        display: block;
+        position: relative;
+        display: flex;
+        align-items: center;
+        &.arrow {
+          &::after {
+            position: absolute;
+            content: "";
+            width: 16px;
+            height: 16px;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url(../../../Assets/img/chevron-down.svg);
+            background-position: center;
+            background-size: cover;
+            transition: all 0.2s;
+          }
+        }
+        &.arrow {
+          &.show {
+            & + .level-2 {
+              height: auto;
+            }
+            &::after {
+              transform: translateY(-50%) rotate(-180deg);
+            }
+          }
+        }
+        &.show {
+          background-color: $surface;
+        }
+      }
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
+
+  .links{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 16px;
+    a{
+      @include fonts(MyriadPro_Bold, $high, 14px, 700, 20px, 1px);
+      display: block;
+    }
+  }
+
+  .header-menus{
+    li{
+      list-style-type: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 40px;
+      padding-left: 16px;
+      a{
+        @include fonts(MyriadPro_Bold, $high, 14px, 700, 20px, 1px);
+        display: block;
+      }
+    }
+  }
+}
+
+
+
+
+.side-back {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000;
+  opacity: 0.4;
+  height: calc(100vh - 40px);
+  z-index: 998;
+  display: none;
+  &.active {
+    display: block;
+  }
+}

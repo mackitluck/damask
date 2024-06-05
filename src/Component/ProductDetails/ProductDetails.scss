@@ -1,0 +1,855 @@
+.product-details-wrapper {
+  padding-top: 40px;
+  @include tablet {
+    padding-top: 24px;
+  }
+  .product-slider {
+    @include flex-start-start;
+    @include tablet {
+      @include prefix(flex-direction, column-reverse);
+    }
+    .v-slider-wrapper {
+      width: 80px;
+      height: 392px;
+      @include ultra-mobile-above {
+        img.borderd {
+          padding: 1px;
+          border: 1px solid $high;
+        }
+      }
+      @include media-1299-below {
+        height: 356.5px;
+      }
+      @include desktop {
+        height: 361px;
+      }
+      @include tablet {
+        width: 100%;
+        height: auto;
+      }
+      .slick-slider {
+        @include tablet {
+          display: none;
+        }
+        &.slick-vertical {
+          height: 100%;
+          .slick-prev {
+            top: 0;
+            transform: unset;
+            left: 0;
+            z-index: 2;
+            background: rgba(99, 115, 129, 0.4);
+            width: 100%;
+            height: 24px;
+            @include prefix(transition, all 300ms ease-in);
+            &.slick-disabled {
+              display: none !important;
+            }
+            &::before {
+              content: "";
+              @include background("../../Assets/img/chevron-down.svg");
+              @include hw(24px);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include prefix(transform, translate(-50%, -50%) rotate(-180deg));
+            }
+            &:hover {
+              background: rgba(99, 115, 129, 0.6);
+            }
+          }
+          .slick-next {
+            top: unset;
+            bottom: 0;
+            transform: unset;
+            left: 0;
+            z-index: 2;
+            background: rgba(99, 115, 129, 0.4);
+            width: 100%;
+            height: 24px;
+            @include prefix(transition, all 300ms ease-in);
+            &.slick-disabled {
+              display: none !important;
+            }
+            &::before {
+              content: "";
+              @include background("../../Assets/img/chevron-down.svg");
+              @include hw(24px);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include prefix(transform, translate(-50%, -50%));
+            }
+            &:hover {
+              background: rgba(99, 115, 129, 0.6);
+            }
+          }
+          .slick-list {
+            height: 100% !important;
+          }
+          .slick-slide {
+            border: 0;
+            cursor: pointer;
+            img {
+              margin-bottom: 24px;
+              @include media-1299-below {
+                margin-bottom: 12px;
+              }
+              @include desktop {
+                margin-bottom: 14px;
+              }
+            }
+          }
+        }
+      }
+      .owl-carousel {
+        @include tablet-above {
+          display: none;
+        }
+        @include ultra-mobile-above {
+          .slider-mobile-img {
+            display: none;
+          }
+        }
+        @include ultra-mobile {
+          .slider-web-img {
+            display: none;
+          }
+        }
+        .owl-nav {
+          margin-top: 0;
+          button.owl-prev {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 100%;
+            background: rgba(99, 115, 129, 0.4);
+            margin: 0;
+            border-radius: 0;
+            @include prefix(transition, all 300ms ease-in);
+            &.disabled {
+              display: none !important;
+            }
+            &::before {
+              content: "";
+              @include background("../../Assets/img/chevron-down.svg");
+              @include hw(24px);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include prefix(transform, translate(-50%, -50%) rotate(90deg));
+            }
+            &:hover {
+              background: rgba(99, 115, 129, 0.6);
+            }
+          }
+          button.owl-next {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 24px;
+            height: 100%;
+            background: rgba(99, 115, 129, 0.4);
+            margin: 0;
+            border-radius: 0;
+            @include prefix(transition, all 300ms ease-in);
+            &.disabled {
+              display: none !important;
+            }
+            &::before {
+              content: "";
+              @include background("../../Assets/img/chevron-down.svg");
+              @include hw(24px);
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              @include prefix(transform, translate(-50%, -50%) rotate(-90deg));
+            }
+            &:hover {
+              background: rgba(99, 115, 129, 0.6);
+            }
+          }
+        }
+        .owl-dots {
+          margin: 0;
+          position: absolute;
+          bottom: 8px;
+          left: 50%;
+          @include prefix(transform, translateX(-50%));
+          .owl-dot {
+            span {
+              @include hw(8px);
+              margin: 4px;
+              background-color: #000000;
+              opacity: 0.2;
+            }
+            &.active {
+              span {
+                background-color: #9f1c69;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    .big-img {
+      padding-left: 24px;
+      width: calc(100% - 80px);
+      @include media-1299-below {
+        padding-left: 12px;
+      }
+      @include tablet {
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+        margin-bottom: 16px;
+      }
+      @include ultra-mobile {
+        display: none;
+      }
+      .enlarge-img {
+        z-index: 88;
+        box-shadow: 0px 1px 8px 1px rgb(0 0 0 / 25%);
+        border: 0;
+      }
+    }
+  }
+  .slider-content-web {
+    width: calc(100% - 80px);
+    padding-left: 24px;
+    text-align: center;
+    margin-left: auto;
+    margin-top: 50px;
+    padding-bottom: 40px;
+    @include media-1299-below {
+      padding-left: 12px;
+    }
+    @include tablet {
+      width: 100%;
+      padding-left: 0;
+    }
+    @include ultra-mobile {
+      display: none;
+    }
+  }
+  .slider-content-mobile {
+    @include ultra-mobile-above {
+      display: none;
+    }
+    text-align: center;
+    margin-top: 24px;
+  }
+  .PD-functionality {
+    padding-top: 4px;
+    text-align: center;
+    padding-bottom: 78px;
+    @include desktop-above {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    @include tablet {
+      padding-top: 44px;
+      padding-bottom: 37px;
+    }
+    p.tl {
+      margin-bottom: 10px;
+    }
+    .product-price {
+      margin-bottom: 4px;
+      @include flex-center-center;
+      del {
+        margin-right: 4px;
+        display: block;
+        + span {
+          color: $error;
+        }
+      }
+      span {
+        display: block;
+        color: $mid;
+      }
+    }
+    label.bm {
+      text-align: center;
+      display: block;
+      margin-bottom: 26px;
+    }
+    .notify-section {
+      max-width: 360px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 26px;
+      p.bm {
+        margin-bottom: 10px;
+        text-align: center;
+        @include mobile {
+          margin-bottom: 14px;
+        }
+      }
+      .notify-wrapper {
+        @include flex-start-center;
+        input {
+          display: block;
+          border: 1px solid $line;
+          border-right: 0;
+          box-sizing: border-box;
+          height: 48px;
+          width: calc(100% - 128px);
+          padding: 0 16px;
+          outline: none !important;
+          box-shadow: none !important;
+          font-family: MyriadPro_Regular;
+          @include prefix(border-radius, 0px);
+          background: $white;
+          font-size: 14px;
+          letter-spacing: 0.25px;
+          color: $high;
+          &::placeholder {
+            color: $mid;
+          }
+          &:focus {
+            border-color: $high;
+          }
+        }
+        button,
+        a {
+          height: 48px;
+          width: 128px;
+          @include prefix(border-radius, 0px);
+          position: relative;
+          outline: none;
+          border: 0;
+          @include fonts(MyriadPro_Bold, $white, 14px, 700, 20px, 1px);
+          padding: 0 24px;
+          text-align: center;
+          box-sizing: border-box;
+          box-shadow: none;
+          display: inline-flex;
+          justify-content: center;
+          text-decoration: none;
+          align-items: center;
+          @include prefix(transition, all 300ms ease-in);
+          overflow: hidden;
+          background-color: $high;
+          &:hover {
+            background-color: $btn-hover;
+            text-decoration: none;
+            @include prefix(transition, all 300ms ease-in);
+            color: $white;
+            cursor: pointer;
+            box-shadow: none;
+          }
+          &[disabled] {
+            background-color: $low;
+            color: $white;
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+    .frosting {
+      margin-left: auto;
+      margin-right: auto;
+      width: 200px;
+      margin-bottom: 32px;
+      label {
+        @include fonts(MyriadPro_Bold, $high, 16px, 700, 24px, 0.15px);
+        text-align: center;
+      }
+    }
+
+    .color-selection {
+      margin-left: -9px;
+      margin-right: -9px;
+      margin-bottom: 32px;
+      .color-box {
+        display: inline-block;
+        position: relative;
+        @include hw(48px);
+        margin-bottom: 0px;
+        margin-top: 8px;
+        cursor: pointer;
+        margin-left: 9px;
+        margin-right: 9px;
+        user-select: none;
+      }
+      .color-box input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .color-checkmark {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        // border: 2px solid red;
+        box-sizing: border-box;
+        background-color: transparent;
+        @include prefix(transition, all 300ms ease-in);
+      }
+      .color-box:hover input ~ .color-checkmark {
+        border-color: $high;
+      }
+      .color-box input:checked ~ .color-checkmark {
+        border-color: $high;
+      }
+
+      .color-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .color-box input:checked ~ .color-checkmark:after {
+        display: block;
+      }
+      .color-box .color-checkmark:after {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $high;
+        background: white;
+      }
+
+      .color-checkmark::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 8;
+        border: 1px solid $line;
+        background: inherit;
+      }
+      .color-box input:checked ~ .color-checkmark::before {
+        top: 2px;
+        left: 2px;
+        width: calc(100% - 4px);
+        height: calc(100% - 4px);
+        border: 1px solid $line;
+        background: inherit;
+        z-index: 2;
+      }
+    }
+
+    .type-section {
+      margin-bottom: 16px;
+      .type-section-header {
+        @include flex-center-center;
+        margin-bottom: 16px;
+        .ll {
+          margin-right: 8px;
+        }
+      }
+      .label-btns-parents {
+        margin-left: -8px;
+        margin-right: -8px;
+        @include flex-center-center;
+        flex-wrap: wrap;
+        .border-btn {
+          margin-left: 8px;
+          margin-right: 8px;
+          margin-bottom: 16px;
+          height: 40px;
+          @include prefix(border-radius, 0px);
+          position: relative;
+          outline: none;
+          border: 1px solid $line;
+          @include fonts(MyriadPro_Bold, $high, 14px, 700, 20px, 1px);
+          padding: 0 20px;
+          text-align: center;
+          box-sizing: border-box;
+          box-shadow: none;
+          display: inline-flex;
+          justify-content: center;
+          text-decoration: none;
+          align-items: center;
+          @include prefix(transition, all 300ms ease-in);
+          overflow: hidden;
+          background-color: $white;
+          &.active{
+            background-color: $white;
+            text-decoration: none;
+            color: $high;
+            cursor: pointer;
+            border-color: $high;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+
+    .fill-btn {
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .mt-10 {
+      margin-top: 10px;
+    }
+    .reviews-box {
+      @include flex-center-center;
+      margin-top: 28px;
+      margin-bottom: 26px;
+      img {
+        @include hw(16px);
+        margin-right: 6px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      p.bm {
+        margin-left: 12px;
+      }
+    }
+    .like-share-btn {
+      margin-bottom: 52px;
+      @include flex-center-center;
+      .surface-bg {
+        background-color: $surface;
+        @include hw(40px);
+        @include flex-center-center;
+        @include prefix(border-radius, 100%);
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+      .surface-bg-dropdown {
+        margin-left: 8px;
+        margin-right: 8px;
+        z-index: 2;
+        .dropdown-toggle {
+          background-color: $surface;
+          @include hw(40px);
+          @include flex-center-center;
+          @include prefix(border-radius, 100%);
+          padding: 0;
+          border: 0;
+          box-shadow: none;
+          &::after {
+            display: none;
+          }
+        }
+        .dropdown-menu {
+          width: auto;
+          height: 100%;
+          max-height: unset;
+          min-height: unset;
+          max-width: unset;
+          min-width: unset;
+          left: 0px !important;
+          top: 0 !important;
+          z-index: -1;
+          border-radius: 36px;
+          background: #fcf7f7;
+          border: 0;
+          transform: unset !important;
+          padding-left: 40px;
+          padding-right: 8px;
+          &.show {
+            @include flex-start-center;
+          }
+          .dropdown-item {
+            padding: 0;
+            @include hw(24px);
+            margin-right: 6px;
+            @include flex-center-center;
+            img {
+              height: 16px;
+              width: auto;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .frequently-bought {
+      p.tl {
+        text-align: center;
+        margin-bottom: 24px;
+      }
+      .row {
+        margin-left: -16px;
+        margin-right: -16px;
+        & > * {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+        @include tablet {
+          margin-left: -12px;
+          margin-right: -12px;
+          & > * {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
+        }
+        @include mobile {
+          margin-left: -8px !important;
+          margin-right: -8px !important;
+          & > * {
+            padding-left: 8px !important;
+            padding-right: 8px !important;
+          }
+        }
+      }
+      .FBT-box {
+        text-align: center;
+        padding-bottom: 18px;
+        p.bm {
+          margin-top: 18px;
+          margin-bottom: 4px;
+        }
+        .product-price {
+          margin-bottom: 10px;
+        }
+        .add-btn {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .inc-dec-box {
+          @include prefix(justify-content, center);
+        }
+      }
+    }
+  }
+  .overview {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    border-top: 1px solid $line;
+    border-bottom: 1px solid $line;
+    @include mobile {
+      padding-top: 60px;
+      padding-bottom: 63px;
+    }
+    .content-block {
+      padding-right: 60px;
+      height: 100%;
+      @include flex-center-start;
+      @include prefix(flex-direction, column);
+      @include tablet {
+        padding-right: 12px;
+      }
+      @include ultra-mobile {
+        padding-right: 0;
+      }
+      p.tl {
+        margin-bottom: 16px;
+      }
+      span.bl {
+        display: block;
+        &.pre-line{
+          white-space: pre-line;
+        }
+      }
+    }
+    .img-block {
+      padding-left: 60px;
+      @include tablet {
+        padding-left: 12px;
+      }
+      @include ultra-mobile {
+        padding-left: 0;
+        margin-top: 40px;
+      }
+    }
+  }
+  .panel-box {
+    margin-top: 8px;
+    margin-bottom: 29px;
+    @include mobile {
+      margin-top: 0;
+    }
+    .accordion-item {
+      border: 0;
+      border-radius: 0;
+      border-bottom: 1px solid $line;
+      .accordion-header {
+        line-height: unset;
+        .accordion-button {
+          background-color: transparent;
+          box-shadow: none;
+          border-radius: 0;
+          padding: 28px 0 23px 0;
+          &::after {
+            @include hw(16px);
+            @include background("../../Assets/img/chevron-down.svg");
+            margin-right: 12px;
+          }
+        }
+      }
+      .accordion-body {
+        padding: 0 0 39px 0;
+        h6 {
+          @include fonts(MyriadPro_Bold, $high, 16px, 700, 24px, 0.15px);
+          margin-bottom: 8px;
+        }
+        span {
+          @include fonts(MyriadPro_Regular, $mid, 14px, 400, 20px, 0.25px);
+          display: block;
+          margin-bottom: 24px;
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+          @include mobile {
+            @include fonts(MyriadPro_Regular, $mid, 16px, 400, 24px, 0.15px);
+          }
+        }
+        p {
+          @include fonts(MyriadPro_Regular, $mid, 16px, 400, 24px, 0.15px);
+        }
+        .HTW-box {
+          @include flex-start-center;
+          margin-bottom: 24px;
+          @include mobile {
+            @include flex-start-start;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+          img {
+            @include hw(80px);
+          }
+          .HTW-content {
+            padding-left: 24px;
+            @include mobile {
+              padding-left: 16px;
+            }
+            p {
+              @include fonts(MyriadPro_Bold, $high, 16px, 700, 24px, 0.15px);
+              margin-bottom: 0;
+            }
+            span {
+              @include fonts(MyriadPro_Regular, $mid, 16px, 400, 24px, 0.15px);
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .review-section {
+    padding-top: 63px;
+    @include mobile {
+      padding-top: 55px;
+    }
+    .review-section-header {
+      text-align: center;
+      padding-bottom: 63px;
+      border-bottom: 1px solid $line;
+      p.tl {
+        margin-bottom: 16px;
+      }
+      .reviews-box {
+        @include flex-center-center;
+        margin-bottom: 24px;
+        img {
+          @include hw(20px);
+          margin-right: 7.5px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        p.bl {
+          margin-left: 16px;
+        }
+      }
+      .fill-tbn {
+        width: 184px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    .RVB-wrapper {
+      padding-bottom: 24px;
+      .RVB {
+        border-bottom: 1px solid $line;
+        padding-top: 48px;
+        padding-bottom: 41px;
+        @include mobile {
+          padding-top: 40px;
+          padding-bottom: 33px;
+        }
+        .star-date {
+          @include flex-start-center;
+          margin-bottom: 24px;
+          .reviews-box {
+            @include flex-center-center;
+            img {
+              @include hw(16px);
+              margin-right: 6px;
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+          p.bl {
+            margin-left: auto;
+          }
+        }
+        p.tm {
+          margin-bottom: 16px;
+        }
+        span.bl {
+          display: block;
+          display: -webkit-box;
+          max-width: 100%;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin-bottom: 10px;
+          @include mobile {
+            -webkit-line-clamp: 5;
+          }
+        }
+        label.bm {
+          display: block;
+          color: $mid;
+          margin: 0;
+        }
+      }
+      .border-btn {
+        width: 184px;
+        margin-top: 64px;
+        @include mobile {
+          margin-top: 56px;
+        }
+      }
+    }
+  }
+  .YMAL-wrapper {
+    padding-top: 92px;
+    padding-bottom: 16px;
+    @include mobile {
+      padding-top: 84px;
+    }
+    h4 {
+      text-align: center;
+      margin-bottom: 84px;
+      @include mobile {
+        margin-bottom: 76px;
+      }
+    }
+    .row {
+      margin-left: -14px;
+      margin-right: -14px;
+      & > * {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+    }
+    .product-box {
+      margin-bottom: 24px;
+      @include mobile {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

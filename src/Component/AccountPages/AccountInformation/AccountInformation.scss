@@ -1,0 +1,47 @@
+.AI-wrapper{
+  padding-top: 4px;
+  @include ultra-mobile{
+    padding-top: 23px;
+  }
+  h4{
+    padding-bottom: 19px;
+    border-bottom: 1px solid $line;
+    @include mobile{
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  .AI-box-wrapper{
+    padding-top: 20px;
+    .account-info, .change-email-address{
+      .input-groups{
+        margin-top: 32px;
+        max-width: 352px;
+        @include desktop{
+          max-width: unset;
+        }
+      }
+      .ck-wrapper{
+        margin-top: 24px;
+        .ck{
+          margin-bottom: 8px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .change-email-address{
+      @include tablet{
+        margin-top: 38px;
+      }
+    }
+    .fill-btn{
+      margin-top: 32px;
+      width: 352px;
+      @include desktop{
+        width: 100%;
+      }
+    }
+  }
+}

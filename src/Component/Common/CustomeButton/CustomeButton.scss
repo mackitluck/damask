@@ -1,0 +1,171 @@
+.MuiButton-contained.fill-btn{
+  height: 48px;
+  @include prefix(border-radius, 0px);
+  position: relative;
+  outline: none;
+  border: 0;
+  @include fonts(MyriadPro_Bold, $white, 14px, 700, 20px, 1px);
+  padding: 0 24px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: none;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  @include prefix(transition, all 300ms ease-in);
+  overflow: hidden;
+  background-color: $high;
+  &:hover {
+    background-color: $btn-hover;
+    text-decoration: none;
+    @include prefix(transition, all 300ms ease-in);
+    color: $white;
+    cursor: pointer;
+    box-shadow: none;
+  }
+  &[disabled] {
+    background-color: $low;
+    color: $white;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+}
+
+
+
+.MuiButton-outlined.border-btn{
+  height: 48px;
+  @include prefix(border-radius, 0px);
+  position: relative;
+  outline: none;
+  border: 1px solid $line;
+  @include fonts(MyriadPro_Bold, $high, 14px, 700, 20px, 1px);
+  padding: 0 23px;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: none;
+  display: inline-flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  @include prefix(transition, all 300ms ease-in);
+  overflow: hidden;
+  background-color: $white;
+  &:hover {
+    background-color: $white;
+    text-decoration: none;
+    @include prefix(transition, all 300ms ease-in);
+    color: $high;
+    cursor: pointer;
+    border-color: $high;
+    box-shadow: none;
+  }
+  &[disabled] {
+    background-color: $white;
+    color: $low;
+    cursor: not-allowed;
+    box-shadow: none;
+    border-color: $line;
+  }
+}
+
+.loader-white-wrapper,
+.loader-black-wrapper{
+  @include flex-center-center;
+}
+.loader-white {
+  width: 8px;
+  height: 8px;
+  left: -8px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  color: #FFF;
+  -webkit-animation: animloaderWhite 2s linear infinite;
+          animation: animloaderWhite 2s linear infinite;
+}
+
+@keyframes animloaderWhite {
+  0% {
+    box-shadow: 10px 0 0 -2px, 30px 0 0 -2px, -10px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 10px 0 0 -2px, 30px 0 0 -2px, -10px 0 0 -2px;
+  }
+  50% {
+    box-shadow: 10px 0 0 -2px, 30px 0 0 -2px, -10px 0 0 2px;
+  }
+  75% {
+    box-shadow: 10px 0 0 2px, 30px 0 0 -2px, -10px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 10px 0 0 -2px, 30px 0 0 2px, -10px 0 0 -2px;
+  }
+}
+@-webkit-keyframes animloaderWhite {
+  0% {
+    box-shadow: 10px 0 0 -2px, 30px 0 0 -2px, -10px 0 0 -2px;
+  }
+  25% {
+    box-shadow: 10px 0 0 -2px, 30px 0 0 -2px, -10px 0 0 -2px;
+  }
+  50% {
+    box-shadow: 10px 0 0 -2px, 30px 0 0 -2px, -10px 0 0 2px;
+  }
+  75% {
+    box-shadow: 10px 0 0 2px, 30px 0 0 -2px, -10px 0 0 -2px;
+  }
+  100% {
+    box-shadow: 10px 0 0 -2px, 30px 0 0 2px, -10px 0 0 -2px;
+  }
+}
+
+
+
+.loader-black {
+  width: 8px;
+  height: 8px;
+  left: -8px;
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  color: #FFF;
+  -webkit-animation: animloaderBlack 2s linear infinite;
+          animation: animloaderBlack 2s linear infinite;
+}
+
+@keyframes animloaderBlack {
+  0% {
+    box-shadow: 10px 0 0 -2px $high, 30px 0 0 -2px $high, -10px 0 0 -2px $high;
+  }
+  25% {
+    box-shadow: 10px 0 0 -2px $high, 30px 0 0 -2px $high, -10px 0 0 -2px $high;
+  }
+  50% {
+    box-shadow: 10px 0 0 -2px $high, 30px 0 0 -2px $high, -10px 0 0 2px $high;
+  }
+  75% {
+    box-shadow: 10px 0 0 2px $high, 30px 0 0 -2px $high, -10px 0 0 -2px $high;
+  }
+  100% {
+    box-shadow: 10px 0 0 -2px $high, 30px 0 0 2px $high, -10px 0 0 -2px $high;
+  }
+}
+@-webkit-keyframes animloaderBlack {
+  0% {
+    box-shadow: 10px 0 0 -2px $high, 30px 0 0 -2px $high, -10px 0 0 -2px $high;
+  }
+  25% {
+    box-shadow: 10px 0 0 -2px $high, 30px 0 0 -2px $high, -10px 0 0 -2px $high;
+  }
+  50% {
+    box-shadow: 10px 0 0 -2px $high, 30px 0 0 -2px $high, -10px 0 0 2px $high;
+  }
+  75% {
+    box-shadow: 10px 0 0 2px $high, 30px 0 0 -2px $high, -10px 0 0 -2px $high;
+  }
+  100% {
+    box-shadow: 10px 0 0 -2px $high, 30px 0 0 2px $high, -10px 0 0 -2px $high;
+  }
+}

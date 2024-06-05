@@ -1,0 +1,6 @@
+export const SUCCESS_RESPONSE_STATUS = 'SUCCESS';
+export const ERROR_RESPONSE_STATUS = 'ERROR';
+export const SUCCESS_RESPONSE_CODE = '200';
+export const ERROR_RESPONSE_CODE = '300';
+export const EMPTY_CART_ERROR_CODE = '1057';
+export const NO_DATA_ERROR_CODE = '1012';

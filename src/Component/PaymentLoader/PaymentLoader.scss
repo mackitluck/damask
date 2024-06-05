@@ -1,0 +1,84 @@
+.payment-loader-wrapper{
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    .loader{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      .cake-wrapper{
+        display: flex;
+        justify-content: center
+      }
+      @include prefix(transform, translate(-50%, -50%));
+      p {
+        @include fonts(MyriadPro_Regular, $mid, 16px, 400, 24px, 0.15px);
+      }
+      .wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include prefix(transform, translate(-50%, -50%));
+        img{
+          @include hw(20px);
+          display: inline-block;
+          position: relative;
+          margin: 0px 4px;
+          @include prefix(animation, loading 3000ms ease-in-out infinite);
+          @include mobile{
+            @include hw(16px);
+          }
+          &:nth-child(5){
+            @include prefix(animation-delay, 100ms)
+          }
+          &:nth-child(4){
+            @include prefix(animation-delay, 200ms)
+          }
+          &:nth-child(3){
+            @include prefix(animation-delay, 300ms)
+          }
+          &:nth-child(2){
+            @include prefix(animation-delay, 400ms)
+          }
+          &:nth-child(1){
+            @include prefix(animation-delay, 500ms)
+          }
+        }
+      }
+      width: 90vw;
+    }
+  }
+  
+  
+  @keyframes loading{
+    0%{
+      @include prefix(transform, translateX(-350px));
+      opacity: 0;
+    }
+    35%,65%{
+      @include prefix(transform, translateX(0px));
+      opacity: 1;
+    }
+    100%{
+      @include prefix(transform, translateX(350px));
+      opacity: 0;
+    }
+  }
+  
+  @include mobile{
+    @keyframes loading{
+      0%{
+        @include prefix(transform, translateX(-150px));
+        opacity: 0;
+      }
+      35%,65%{
+        @include prefix(transform, translateX(0px));
+        opacity: 1;
+      }
+      100%{
+        @include prefix(transform, translateX(150px));
+        opacity: 0;
+      }
+    }
+  }

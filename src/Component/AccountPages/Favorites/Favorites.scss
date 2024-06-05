@@ -1,0 +1,28 @@
+.favorites{
+  padding-top: 4px;
+  @include ultra-mobile{
+    padding-top: 23px;
+  }
+  h4{
+    padding-bottom: 19px;
+    border-bottom: 1px solid $line;
+    @include mobile{
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  .favorites-boxes{
+    padding-top: 24px;
+    @include mobile{
+      padding-top: 16px;
+    }
+    .product-box{
+      @include tablet{
+        margin-bottom: 24px;
+      }
+      @include mobile{
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

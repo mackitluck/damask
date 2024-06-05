@@ -1,0 +1,75 @@
+.digest{
+  .digest-box{
+    padding-top: 64px;
+    padding-bottom: 64px;
+    @include flex-start-start;
+    @include tablet{
+      @include prefix(flex-direction, column-reverse);
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+    .digest-box-content{
+      width: calc(100% - 376px);
+      padding-top: 24px;
+      padding-right: 56px;
+      @include tablet{
+        width: 100%;
+        padding-right: 0;
+        padding-top: 25px
+      }
+      h2{
+        @include prefix(transition, all 300ms ease-in);
+        display: block;
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        @include mobile{
+          font-size: 36px;
+          line-height: 44px;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+        }
+      }
+      .h2{
+        cursor: pointer;
+        display: block;
+        margin-bottom: 32px;
+        @include prefix(transition, all 300ms ease-in);
+        &:hover{
+          color: $mid;
+          h2{
+            color: $mid;
+          }
+        }
+        @include tablet{
+          margin-bottom: 29px
+        }
+      }
+      .bl{
+        @include prefix(transition, all 300ms ease-in);
+        display: block;
+        display: -webkit-box;
+        max-width: 100%;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover{
+          color: $mid;
+          cursor: pointer;
+        }
+      }
+    }
+    .digest-img{
+      width: 376px;
+      display: block;
+      cursor: pointer;
+      @include tablet{
+        width: 100%;
+      }
+    }
+  }
+}

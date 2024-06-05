@@ -1,0 +1,95 @@
+.zoom-popup{
+  .modal-dialog{
+    width: calc(100% - 16px);
+    max-width: unset;
+    // height: calc(100vh - 16px);
+    height: auto;
+    // min-height: unset;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    .modal-content{
+      height: 100%;
+    }
+    
+    .modal-body{
+      padding: 0;
+      .close-icon{
+        @include hw(40px);
+        @include flex-center-center;
+        background: $white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        img{
+          @include hw(32px);
+        }
+        @include mobile{
+          @include hw(32px);
+          img{
+            @include hw(26px);
+          }
+        }
+      }
+      .zoom-img-wrapper{
+        padding: 40px 40px 40px 40px;
+        @include mobile{
+          padding: 32px;
+        }
+      }
+      figure{
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .owl-carousel{
+        .owl-nav{
+          margin: 0;
+          .owl-prev, .owl-next{
+            position: absolute;
+            top: 50%;
+            margin: 0;
+            border-radius: 100%;
+            span{
+              display: none;
+            }
+            &:hover{
+              box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+              -webkit-box-shadow: 0px 0px 0px 5px rgba(73, 35, 35, 0.1);
+              -moz-box-shadow: 0px 0px 0px 5px rgba(0, 0, 0, 0.1);
+              transition: all .3s ease-in-out;
+            }
+          }
+          .owl-prev{
+            left: 10px;
+            @include prefix(transform, translateY(-50%));
+            @include hw(24px);
+            @include background("../../../Assets/img/arrow-left1.svg");
+          }
+          .owl-next{
+            right: 10px;
+            @include hw(24px);
+            @include prefix(transform, translateY(-50%));
+            @include background("../../../Assets/img/arrow-right1.svg");
+          }
+        }
+      }
+      .all-imgs{
+        @include flex-start-center;
+        margin-top: 8px;
+        margin-left: -4px;
+        margin-right: -4px;
+        .img-border{
+          margin-left: 4px;
+          margin-right: 4px;
+          max-width: 20%;
+          &.active{
+            border: 1px solid #8D1D58;
+            padding: 1px;
+          }
+        }
+      }
+    }
+  }
+}

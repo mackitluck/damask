@@ -1,0 +1,89 @@
+.my-order{
+  padding-top: 4px;
+  @include ultra-mobile{
+    padding-top: 23px;
+  }
+  h4{
+    padding-bottom: 19px;
+    border-bottom: 1px solid $line;
+    @include mobile{
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  .rac-table-wrapper{
+    .rac-table{
+      display: table;
+      border-collapse: collapse;
+      width: 100%;
+      @include tablet{
+        display: block;
+      }
+    }
+    .rac-row{
+      display: table-row;
+      border-collapse: collapse;
+      &:first-child{
+        border-top: 0;
+        border-bottom: 1px solid $line;
+        .rac-column{
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+        @include tablet{
+          display: none;
+        }
+      }
+      border-bottom: 1px solid #C7CAD1;
+      @include tablet-above{
+        &:not(:first-child){
+          p.ll{
+            display: none;
+          }
+        }
+      }
+      @include tablet{
+        display: block;
+      }
+    }
+    .rac-column{
+      display: table-cell;
+      border-collapse: collapse;
+      padding: 16px 0px;
+      vertical-align: middle;
+      &:last-child{
+        width: 104px;
+        text-align: center;
+        @include tablet{
+          width: auto
+        }
+      }
+      @include tablet{
+        padding: 4px 0;
+        @include flex-start-start;
+        p.ll{
+          width: 95px;
+          margin-top: 2px;
+        }
+        p.bl{
+          width: calc(100% - 95px);
+        }
+        &:first-child{
+          padding-top: 16px
+        }
+        &:last-child{
+          padding-top: 12px;
+          padding-bottom: 23px
+        }
+      }
+    }
+  }
+  .view-order{
+    @include fonts(MyriadPro_Regular, $high, 16px, 400, 16px, 0.15px);
+    @include prefix(transition, all300ms ease-in);
+    &:hover{
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}

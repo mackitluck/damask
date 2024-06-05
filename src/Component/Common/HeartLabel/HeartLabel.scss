@@ -1,0 +1,33 @@
+.heart {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 0px;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  user-select: none;
+}
+.heart input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  @include prefix(transition, all 300ms ease-in);
+}
+.heart-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  @include background("../../../Assets/img/Default-Heart.svg");
+  box-sizing: border-box;
+  @include prefix(transition, all 300ms ease-in);
+}
+.heart:hover input ~ .heart-checkmark {
+  @include background("../../../Assets/img/Hovered-heart.svg");
+}
+.heart input:checked ~ .heart-checkmark {
+  @include background("../../../Assets/img/Fill-heart.svg");
+}

@@ -1,0 +1,140 @@
+header{
+  background-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  @include prefix(transition, all 50ms ease-in);
+  &.boxShadow{
+    box-shadow: 0px 1px 8px 1px rgb(0 0 0 / 25%);
+    background-color: $white;
+  }
+  .container{
+    position: relative;
+  }
+  .header-wrapper{
+    height: 104px;
+    position: relative;
+    @include flex-between-center;
+    @include tablet{
+      height: 64px;
+    }
+    .menu-icon{
+      @include hw(24px);
+      @include tablet-above{
+        display: none;
+      }
+    }
+    .left-nav-menu{
+      @include flex-start-center;
+      & > li{
+        display: block;
+        margin-right: 40px;
+        @include desktop{
+          margin-right: 24px;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        .links{
+          display: block;
+          text-transform: uppercase;
+          &:hover{
+            cursor: pointer;
+            color: $mid;
+          }
+        }
+      }
+      @include tablet{
+        display: none
+      }
+    }
+    .right-nav-menu{
+      @include flex-end-center;
+      margin-left: auto;
+      & > li{
+        display: block;
+        margin-left: 40px;
+        @include desktop{
+          margin-left: 24px;
+        }
+        @include tablet{
+          margin-left: 0;
+        }
+        &:first-child{
+          margin-left: 0;
+        }
+        .links{
+          display: block;
+          text-transform: uppercase;
+          &:hover{
+            cursor: pointer;
+            color: $mid;
+          }
+          @include tablet{
+            display: none
+          }
+          &.mobile-account{
+           display: block !important
+          }
+        }
+        .add-cart{
+          @include flex-end-center;
+          img{
+            @include hw(24px);
+            margin-right: 13px;
+          }
+          @include ultra-mobile{
+            @include flex-end-center;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    
+    .logo{
+      display: block;
+      position: absolute;
+      cursor: pointer;
+      height: 88px;
+      width: auto;
+      top: 50%;
+      left: 50%;
+      @include prefix(transform, translate(-50% , -50%));
+      @include desktop{
+        height: 70px;
+      }
+      @include tablet{
+        height: 40px;
+      }
+      img{
+        height: 100%;
+        width: auto;
+      }
+      .web-logo{
+        @include tablet{
+          display: none;
+        }
+      }
+      .mobile-logo{
+        @include tablet-above{
+          display: none;
+        }
+      }
+    }
+  }
+}
+// .badge-header {
+//   display: none;
+// }
+header#navbar{
+  padding-top: 150px;
+  background-image: url('../../Assets/img/header-bg-chocolate.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1800px){
+  header#navbar{
+    padding-top: 8%;
+    background-size: contain;
+  }
+}
